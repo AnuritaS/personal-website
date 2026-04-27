@@ -1,0 +1,26 @@
+{
+  "projects/stata8.qmd": {
+    "stata8.html": "7ae3c0a3"
+  },
+  "projects/index.qmd": {
+    "index.html": "f5dca643"
+  },
+  "projects/stata3.qmd": {
+    "stata3.html": "59cc06ec"
+  },
+  "awards.qmd": {
+    "awards.html": "adb2fadd"
+  },
+  "index.qmd": {
+    "index.html": "6d4e342a"
+  },
+  "blog/posts/evaluation-failure.qmd": {
+    "evaluation-failure.html": "f6b01cc8"
+  },
+  "blog/index.qmd": {
+    "index.html": "1c4bae9c"
+  },
+  "about.qmd": {
+    "about.html": "13021bab"
+  }
+}

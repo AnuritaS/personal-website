@@ -1,0 +1,58 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Anurita Srivastava"
+  description: "Policy Strategist · Program Manager · Evidence-backed impact"
+  favicon: assets/favicon.ico
+
+  navbar:
+    background: "#F0F7FF"
+    foreground: "#1A3A5C"
+    logo: ""
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Projects"
+        href: projects/index.qmd
+      - text: "Blog"
+        href: blog/index.qmd
+      - text: "Awards"
+        href: awards.qmd
+      - text: "About"
+        href: about.qmd
+    right:
+      - text: "Email me ↗"
+        href: mailto:srivastava.anurita@gmail.com
+        aria-label: "Contact"
+
+  page-footer:
+    background: "#1A3A5C"
+    foreground: "#B8D8F8"
+    left: "© 2026 Anurita Srivastava · Policy Strategist"
+    right:
+      - icon: github
+        href: https://github.com/AnuritaS
+      - icon: linkedin
+        href: https://linkedin.com
+      - icon: envelope
+        href: mailto:your@email.com
+
+  open-graph:
+    title: "Anurita Srivastava — Policy Strategist"
+    description: "Evidence-backed policy work across environment & social policy, impact evaluation, and program design."
+
+format:
+  html:
+    theme:
+      - cosmo
+      - custom.scss
+    css: styles.css
+    toc: false
+    page-layout: full
+    include-in-header:
+      - text: |
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">

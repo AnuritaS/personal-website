@@ -1,0 +1,131 @@
+---
+title: ""
+page-layout: full
+toc: false
+---
+
+```{=html}
+<div class="page-hero">
+  <div class="content-section" style="padding-top:0;padding-bottom:0;">
+    <p class="eyebrow">Recognition</p>
+    <h1 style="font-size:2rem;margin-bottom:0.4rem;">Awards &amp; Honors</h1>
+    <p style="color:#4A6A88;font-size:0.9rem;max-width:500px;line-height:1.6;">
+      Third-party validation of evidence-backed work across policy research, 
+      program evaluation, and public service.
+    </p>
+  </div>
+</div>
+
+<!-- Trophy shelf -->
+<div class="content-section">
+  <div class="section-divider">Top honors</div>
+  <div class="trophy-shelf">
+    <div class="trophy-card">
+      <div class="trophy-star">★</div>
+      <div class="trophy-name">Public Service Excellence Award</div>
+      <div class="trophy-org">NASPE</div>
+      <div class="trophy-year">2024</div>
+    </div>
+    <div class="trophy-card">
+      <div class="trophy-star">★</div>
+      <div class="trophy-name">Emerging Evaluator Award</div>
+      <div class="trophy-org">American Evaluation Association</div>
+      <div class="trophy-year">2023</div>
+    </div>
+    <div class="trophy-card">
+      <div class="trophy-star">★</div>
+      <div class="trophy-name">HHS Innovation Grant Recipient</div>
+      <div class="trophy-org">Dept. of Health &amp; Human Services</div>
+      <div class="trophy-year">2022</div>
+    </div>
+  </div>
+</div>
+
+<!-- Full recognition timeline -->
+<div style="background:#F7FAFE;border-top:1px solid #D0DFF0;border-bottom:1px solid #D0DFF0;">
+  <div class="content-section">
+    <div class="section-divider">All recognition</div>
+    <div class="recognition-list">
+      <div class="rec-row">
+        <div class="rec-date">Mar 2026</div>
+        <div>
+          <div class="rec-title">Invited speaker — AEA 2026 Annual Conference</div>
+          <div class="rec-org">American Evaluation Association</div>
+        </div>
+      </div>
+      <div class="rec-row">
+        <div class="rec-date">Nov 2025</div>
+        <div>
+          <div class="rec-title">"40 Under 40 in Public Policy" — featured profile</div>
+          <div class="rec-org">Governing Magazine</div>
+        </div>
+      </div>
+      <div class="rec-row">
+        <div class="rec-date">Jun 2024</div>
+        <div>
+          <div class="rec-title">Public Service Excellence Award</div>
+          <div class="rec-org">National Association of State Personnel Executives (NASPE)</div>
+        </div>
+      </div>
+      <div class="rec-row">
+        <div class="rec-date">Oct 2023</div>
+        <div>
+          <div class="rec-title">Emerging Evaluator Award</div>
+          <div class="rec-org">American Evaluation Association</div>
+        </div>
+      </div>
+      <div class="rec-row">
+        <div class="rec-date">Jun 2023</div>
+        <div>
+          <div class="rec-title">Peer-reviewed publication — Journal of Policy Analysis &amp; Management</div>
+          <div class="rec-org">"Implementation fidelity in decentralized workforce programs"</div>
+        </div>
+      </div>
+      <div class="rec-row">
+        <div class="rec-date">Sep 2022</div>
+        <div>
+          <div class="rec-title">Congressional testimony — House Education &amp; Workforce Committee</div>
+          <div class="rec-org">U.S. House of Representatives</div>
+        </div>
+      </div>
+      <div class="rec-row">
+        <div class="rec-date">Apr 2022</div>
+        <div>
+          <div class="rec-title">HHS Innovation Grant Recipient</div>
+          <div class="rec-org">Dept. of Health &amp; Human Services · $340,000 research grant</div>
+        </div>
+      </div>
+      <div class="rec-row">
+        <div class="rec-date">2021–23</div>
+        <div>
+          <div class="rec-title">7 peer-reviewed publications</div>
+          <div class="rec-org">Co-authored with Urban Institute research team · DOL and HHS program evaluations</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Media -->
+<div class="content-section">
+  <div class="section-divider">Media &amp; press</div>
+  <div class="grid-2">
+    <div style="background:#fff;border:1px solid #D0DFF0;border-radius:10px;padding:1rem 1.2rem;display:flex;gap:1rem;align-items:flex-start;">
+      <div style="font-size:1.5rem;">📰</div>
+      <div>
+        <div style="font-size:0.75rem;font-weight:600;color:#8AA4C0;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;">Governing Magazine</div>
+        <div style="font-size:0.88rem;font-weight:500;color:#1A3A5C;margin-bottom:3px;">"40 Under 40 in Public Policy" feature</div>
+        <div style="font-size:0.78rem;color:#4A6A88;">Nov 2025</div>
+      </div>
+    </div>
+    <div style="background:#fff;border:1px solid #D0DFF0;border-radius:10px;padding:1rem 1.2rem;display:flex;gap:1rem;align-items:flex-start;">
+      <div style="font-size:1.5rem;">🎙️</div>
+      <div>
+        <div style="font-size:0.75rem;font-weight:600;color:#8AA4C0;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;">Evidence Matters Podcast</div>
+        <div style="font-size:0.88rem;font-weight:500;color:#1A3A5C;margin-bottom:3px;">"Designing evaluations that survive the field"</div>
+        <div style="font-size:0.78rem;color:#4A6A88;">Feb 2024</div>
+      </div>
+    </div>
+  </div>
+</div>
+```

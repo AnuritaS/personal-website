@@ -1,0 +1,15 @@
+[
+  {
+    "listing": "/projects/index.html",
+    "items": [
+      "/projects/stata8.html",
+      "/projects/stata3.html"
+    ]
+  },
+  {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/posts/evaluation-failure.html"
+    ]
+  }
+]

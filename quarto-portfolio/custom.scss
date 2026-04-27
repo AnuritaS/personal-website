@@ -1,0 +1,393 @@
+/*-- scss:defaults --*/
+
+// ─── FONT IMPORTS ───────────────────────────────────────────────
+$font-display: 'DM Serif Display', Georgia, serif;
+$font-body: 'DM Sans', system-ui, sans-serif;
+
+// ─── COLOUR PALETTE ─────────────────────────────────────────────
+// Core blues
+$blue-50:  #F0F7FF;   // page background
+$blue-100: #DAEEFF;   // lightest fill / cards
+$blue-200: #B8D8F8;   // light accent
+$blue-300: #8BBFE8;   // mid accent
+$blue-400: #5A9FD4;   // medium interactive
+$blue-500: #2E7DBF;   // primary brand
+$blue-600: #1A5E9A;   // deep links
+$blue-700: #1A3A5C;   // darkest / footer / heading
+$blue-800: #0F2540;   // near-black text
+
+// Supporting pastels
+$teal-100: #D6F5F2;
+$teal-300: #6ECDC5;
+$teal-600: #1A8A82;
+
+$sky-100:  #DCEFFD;
+$sky-200:  #C0E0FA;
+
+$slate-50: #F7FAFE;
+$slate-100:#EAF1FA;
+$slate-200:#D0DFF0;
+$slate-400:#8AA4C0;
+$slate-600:#4A6A88;
+
+$white: #FFFFFF;
+$ink:   #1A2B3C;
+
+// ─── QUARTO BOOTSTRAP VARIABLE OVERRIDES ────────────────────────
+$body-bg:        $blue-50;
+$body-color:     $ink;
+$link-color:     $blue-600;
+$headings-font-family: $font-display;
+$font-family-base:     $font-body;
+
+// Navbar
+$navbar-bg:      $blue-50;
+$navbar-fg:      $blue-700;
+
+/*-- scss:rules --*/
+
+// ─── GLOBAL BASE ────────────────────────────────────────────────
+body {
+  font-family: $font-body;
+  font-weight: 400;
+  background: $blue-50;
+  color: $ink;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: $font-display;
+  color: $blue-700;
+  letter-spacing: -0.01em;
+}
+
+a {
+  color: $blue-600;
+  text-decoration: none;
+  &:hover { color: $blue-500; text-decoration: underline; }
+}
+
+// ─── NAVBAR ─────────────────────────────────────────────────────
+.navbar {
+  background: $white !important;
+  border-bottom: 1px solid $sky-200;
+  padding: 0.6rem 2rem;
+  box-shadow: 0 1px 12px rgba(42, 90, 150, 0.06);
+
+  .navbar-brand {
+    font-family: $font-display;
+    font-size: 1.1rem;
+    color: $blue-700 !important;
+  }
+
+  .nav-link {
+    font-family: $font-body;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: $slate-600 !important;
+    padding: 0.4rem 0.9rem !important;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+
+    &:hover, &.active {
+      color: $blue-600 !important;
+      background: $blue-100;
+    }
+  }
+
+  // Hire me CTA button
+  .nav-item:last-child .nav-link {
+    background: $blue-700;
+    color: $white !important;
+    font-weight: 500;
+    padding: 0.35rem 1rem !important;
+
+    &:hover {
+      background: $blue-500;
+      color: $white !important;
+    }
+  }
+}
+
+// ─── FOOTER ─────────────────────────────────────────────────────
+.nav-footer {
+  background: $blue-700 !important;
+  color: $blue-200;
+  font-size: 0.8rem;
+  padding: 1.2rem 2rem;
+
+  a { color: $blue-300; &:hover { color: $white; } }
+}
+
+// ─── UTILITY CLASSES ────────────────────────────────────────────
+
+// Section label (small caps eyebrow)
+.eyebrow {
+  font-family: $font-body;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $blue-500;
+  margin-bottom: 0.5rem;
+}
+
+// Stat cards
+.stat-card {
+  background: $blue-100;
+  border-radius: 12px;
+  padding: 1.1rem 1.2rem;
+  text-align: center;
+
+  .stat-number {
+    font-family: $font-display;
+    font-size: 1.8rem;
+    color: $blue-700;
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.72rem;
+    color: $blue-500;
+    margin-top: 0.3rem;
+  }
+}
+
+// Expertise / skill pills
+.pill {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  margin: 0.2rem;
+
+  &.pill-blue   { background: $blue-100;  color: $blue-700;  border: 1px solid $blue-200; }
+  &.pill-sky    { background: $sky-100;   color: $blue-600;  border: 1px solid $sky-200; }
+  &.pill-teal   { background: $teal-100;  color: $teal-600;  border: 1px solid $teal-300; }
+  &.pill-slate  { background: $slate-100; color: $slate-600; border: 1px solid $slate-200; }
+}
+
+// Project / blog cards
+.portfolio-card {
+  background: $white;
+  border: 1px solid $slate-200;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 8px 30px rgba(30, 80, 140, 0.12);
+    transform: translateY(-2px);
+  }
+
+  .card-bar {
+    height: 4px;
+    &.bar-blue  { background: $blue-400; }
+    &.bar-sky   { background: $blue-300; }
+    &.bar-teal  { background: $teal-300; }
+    &.bar-slate { background: $slate-400; }
+  }
+
+  .card-body-inner { padding: 1.2rem; }
+
+  .card-tag {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: $blue-500;
+    margin-bottom: 0.4rem;
+  }
+
+  .card-title {
+    font-family: $font-display;
+    font-size: 1rem;
+    color: $blue-700;
+    margin-bottom: 0.4rem;
+    line-height: 1.3;
+  }
+
+  .card-desc {
+    font-size: 0.82rem;
+    color: $slate-600;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+  }
+
+  .card-link {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: $blue-600;
+  }
+}
+
+// Timeline (About / Experience)
+.timeline-item {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+
+  .tl-dot-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 14px;
+    flex-shrink: 0;
+    padding-top: 4px;
+
+    .tl-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: $blue-300;
+      flex-shrink: 0;
+    }
+    .tl-line {
+      width: 1px;
+      background: $slate-200;
+      flex: 1;
+      margin-top: 4px;
+    }
+  }
+
+  .tl-role  { font-size: 0.95rem; font-weight: 500; color: $blue-700; }
+  .tl-org   { font-size: 0.82rem; color: $blue-500; }
+  .tl-years { font-size: 0.75rem; color: $slate-400; margin-bottom: 0.3rem; }
+  .tl-desc  { font-size: 0.82rem; color: $slate-600; line-height: 1.6; }
+}
+
+// Award trophy cards
+.trophy-card {
+  background: $blue-100;
+  border: 1px solid $blue-200;
+  border-radius: 12px;
+  padding: 1.2rem;
+
+  .trophy-star { font-size: 1.2rem; color: $blue-500; margin-bottom: 0.5rem; }
+  .trophy-name { font-size: 0.9rem; font-weight: 500; color: $blue-700; margin-bottom: 0.2rem; line-height: 1.3; }
+  .trophy-org  { font-size: 0.75rem; color: $blue-500; }
+  .trophy-year { font-size: 0.72rem; color: $blue-400; }
+}
+
+// Affiliations bar
+.affil-chip {
+  font-size: 0.75rem;
+  color: $slate-600;
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  background: $slate-100;
+  font-weight: 500;
+}
+
+// Blog rows
+.blog-row {
+  display: flex;
+  gap: 1rem;
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid $slate-100;
+  align-items: flex-start;
+
+  &:last-child { border-bottom: none; }
+
+  .blog-date { font-size: 0.75rem; color: $slate-400; min-width: 60px; padding-top: 2px; }
+  .blog-tag  { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: $blue-500; margin-bottom: 2px; }
+  .blog-title { font-size: 0.88rem; font-weight: 500; color: $blue-700; }
+}
+
+// Impact numbers highlight
+.impact-number {
+  font-family: $font-display;
+  font-size: 2rem;
+  color: $blue-700;
+}
+
+// Sections with blue tint background
+.section-tinted {
+  background: $blue-100;
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 1.5rem 0;
+}
+
+// CTA button style
+.btn-primary-custom {
+  background: $blue-700;
+  color: $white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 24px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: inline-block;
+  transition: background 0.2s;
+
+  &:hover { background: $blue-500; color: $white; text-decoration: none; }
+}
+
+.btn-outline-custom {
+  background: transparent;
+  color: $blue-600;
+  border: 1px solid $blue-300;
+  padding: 0.5rem 1.2rem;
+  border-radius: 24px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: inline-block;
+  transition: all 0.2s;
+
+  &:hover { background: $blue-100; text-decoration: none; }
+}
+
+// Hero section
+.hero-section {
+  background: $white;
+  padding: 4rem 2rem 3rem;
+  border-bottom: 1px solid $sky-200;
+}
+
+.hero-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: $blue-100;
+  border: 2px solid $blue-300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-display;
+  font-size: 1.6rem;
+  color: $blue-600;
+}
+
+// Page hero (inner pages)
+.page-hero {
+  background: $white;
+  padding: 3rem 2rem 2rem;
+  border-bottom: 1px solid $sky-200;
+}
+
+// Section label divider
+.section-divider {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $slate-400;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 2rem 0 1rem;
+
+  &::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: $slate-200;
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .hero-section { padding: 2rem 1rem; }
+  .page-hero { padding: 2rem 1rem; }
+  .stat-card .stat-number { font-size: 1.4rem; }
+}

@@ -1,0 +1,125 @@
+/* styles.css — supplemental component styles */
+
+/* ── Grid helpers ── */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; }
+
+@media (max-width: 900px) {
+  .grid-3, .grid-4 { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+}
+
+/* ── Hero layout ── */
+.hero-inner {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.hero-left { flex: 1; }
+.hero-right { display: flex; flex-direction: column; gap: 0.6rem; min-width: 160px; }
+
+@media (max-width: 700px) {
+  .hero-inner { flex-direction: column; }
+  .hero-right { flex-direction: row; flex-wrap: wrap; }
+}
+
+/* ── Skills section ── */
+.skills-group { margin-bottom: 1.2rem; }
+.skills-group-name {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #1A3A5C;
+  margin-bottom: 0.4rem;
+}
+
+/* ── Affiliation bar ── */
+.affil-bar {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  background: #F7FAFE;
+  border-top: 1px solid #D0DFF0;
+}
+.affil-label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #8AA4C0;
+  font-weight: 600;
+  margin-right: 0.4rem;
+}
+
+/* ── Pills row ── */
+.pills-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 1rem 0; }
+
+/* ── Blog list card ── */
+.blog-list-card {
+  background: #FFFFFF;
+  border: 1px solid #D0DFF0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* ── Trophy shelf ── */
+.trophy-shelf { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1rem 0; }
+@media (max-width: 700px) { .trophy-shelf { grid-template-columns: 1fr; } }
+
+/* ── Recognition list ── */
+.recognition-list {
+  background: #FFFFFF;
+  border: 1px solid #D0DFF0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.rec-row {
+  display: flex;
+  gap: 1rem;
+  padding: 0.85rem 1.1rem;
+  border-bottom: 1px solid #EAF1FA;
+  align-items: baseline;
+}
+.rec-row:last-child { border-bottom: none; }
+.rec-date { font-size: 0.75rem; color: #8AA4C0; min-width: 68px; }
+.rec-title { font-size: 0.88rem; font-weight: 500; color: #1A3A5C; margin-bottom: 2px; }
+.rec-org { font-size: 0.75rem; color: #4A6A88; }
+
+/* ── Quarto listing overrides ── */
+.quarto-listing-container { margin-top: 1.5rem; }
+.listing-item {
+  background: #FFFFFF !important;
+  border: 1px solid #D0DFF0 !important;
+  border-radius: 14px !important;
+  overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.listing-item:hover {
+  box-shadow: 0 8px 30px rgba(30, 80, 140, 0.1) !important;
+  transform: translateY(-2px);
+}
+.listing-item .listing-title { color: #1A3A5C !important; font-family: 'DM Serif Display', serif; }
+.listing-item .listing-description { color: #4A6A88 !important; font-size: 0.85rem; }
+.listing-item .listing-category {
+  background: #DAEEFF !important;
+  color: #1A5E9A !important;
+  border-radius: 20px;
+  padding: 2px 10px;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+/* ── Section wrapper ── */
+.content-section { max-width: 900px; margin: 0 auto; padding: 2.5rem 1.5rem; }
+.content-section-wide { max-width: 1100px; margin: 0 auto; padding: 2.5rem 1.5rem; }
+
+/* ── Inline stat highlight ── */
+.stat-inline { color: #1A5E9A; font-weight: 600; }
+
+/* ── Page wrapper utility ── */
+.full-width-strip { margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); padding-left: calc(50vw - 50%); padding-right: calc(50vw - 50%); }

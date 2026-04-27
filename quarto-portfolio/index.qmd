@@ -1,0 +1,192 @@
+---
+title: ""
+page-layout: full
+toc: false
+---
+
+```{=html}
+<!-- ═══════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════ -->
+<section class="hero-section">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-avatar" style="margin-bottom:1.2rem">AS</div>
+      <p class="eyebrow">Policy Strategist · Program Manager · Georgetown University</p>
+      <h1 style="font-size:2.2rem;margin-bottom:0.4rem;color:#1A3A5C;">Anurita Srivastava</h1>
+      <p style="font-size:1rem;color:#4A6A88;margin-bottom:1rem;">Turning evidence into programs that actually work.</p>
+      <p style="font-size:0.9rem;color:#4A6A88;line-height:1.75;max-width:480px;margin-bottom:1.4rem;">
+        I work at the intersection of policy research, program evaluation, and data analytics — 
+        designing evidence-backed interventions and helping governments and nonprofits measure 
+        what actually matters.
+      </p>
+      <div style="display:flex;gap:0.6rem;flex-wrap:wrap;">
+        <a href="assets/cv.pdf" class="btn-primary-custom">Download CV ↓</a>
+        <a href="https://linkedin.com" class="btn-outline-custom">LinkedIn ↗</a>
+        <a href="https://github.com/AnuritaS" class="btn-outline-custom">GitHub ↗</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="stat-card">
+        <div class="stat-number">$1M+</div>
+        <div class="stat-label">Programs managed</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">18</div>
+        <div class="stat-label">Policy briefs published</div>
+      </div>
+      <div class="stat-card" style="background:#D6F5F2;">
+        <div class="stat-number" style="color:#1A8A82;">6</div>
+        <div class="stat-label" style="color:#1A8A82;">Govt. agencies served</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">5 yrs</div>
+        <div class="stat-label">Professional experience</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     EXPERTISE PILLS
+═══════════════════════════════════════════════ -->
+<div style="background:#F7FAFE;border-top:1px solid #D0DFF0;border-bottom:1px solid #D0DFF0;">
+  <div class="content-section" style="padding-top:1.5rem;padding-bottom:1.5rem;">
+    <div class="section-divider">Areas of expertise</div>
+    <div class="pills-row">
+      <span class="pill pill-blue">Evidence synthesis</span>
+      <span class="pill pill-sky">Program evaluation</span>
+      <span class="pill pill-teal">Causal inference</span>
+      <span class="pill pill-blue">Power analysis &amp; RCT design</span>
+      <span class="pill pill-sky">Health equity</span>
+      <span class="pill pill-teal">Geospatial analysis</span>
+      <span class="pill pill-blue">Federal grant writing</span>
+      <span class="pill pill-sky">Stata · R · Python</span>
+      <span class="pill pill-teal">Stakeholder engagement</span>
+      <span class="pill pill-slate">Data-driven strategy</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     FEATURED PROJECTS
+═══════════════════════════════════════════════ -->
+<div class="content-section">
+  <div class="section-divider">Featured projects</div>
+  <div class="grid-3">
+
+    <div class="portfolio-card">
+      <div class="card-bar bar-blue"></div>
+      <div class="card-body-inner">
+        <div class="card-tag">Causal inference · Stata</div>
+        <div class="card-title">Sampling Theory &amp; Power Analysis</div>
+        <div class="card-desc">Monte Carlo simulation across 13,000 regressions. Cluster RCT design with ICC = 0.3. Individual and cluster-level power calculations with attrition adjustments.</div>
+        <a href="projects/stata3.qmd" class="card-link">View project →</a>
+      </div>
+    </div>
+
+    <div class="portfolio-card">
+      <div class="card-bar bar-sky"></div>
+      <div class="card-body-inner">
+        <div class="card-tag">Geospatial · Fuzzy matching</div>
+        <div class="card-title">Tanzania Ward Redistricting &amp; Causal Debiasing</div>
+        <div class="card-desc">Reconciled 3,333→3,944 Tanzanian wards using ArcGIS shapefile overlap. Monte Carlo simulation proving collider bias persists at N=2,500.</div>
+        <a href="projects/stata8.qmd" class="card-link">View project →</a>
+      </div>
+    </div>
+
+    <div class="portfolio-card">
+      <div class="card-bar bar-teal"></div>
+      <div class="card-body-inner">
+        <div class="card-tag">Policy analysis · Evaluation</div>
+        <div class="card-title">Maternal Health Access — Rural Counties</div>
+        <div class="card-desc">Designed and managed a multi-site program expanding prenatal and postpartum care for 42,000 residents across 11 counties. HHS-funded.</div>
+        <a href="projects/index.qmd" class="card-link">View project →</a>
+      </div>
+    </div>
+
+  </div>
+  <div style="text-align:center;margin-top:1.5rem;">
+    <a href="projects/index.qmd" class="btn-outline-custom">See all projects →</a>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     LATEST WRITING
+═══════════════════════════════════════════════ -->
+<div style="background:#F7FAFE;border-top:1px solid #D0DFF0;border-bottom:1px solid #D0DFF0;">
+  <div class="content-section">
+    <div class="section-divider">Latest writing</div>
+    <div class="blog-list-card">
+      <div class="blog-row">
+        <div class="blog-date">Apr 2026</div>
+        <div>
+          <div class="blog-tag">Policy analysis</div>
+          <div class="blog-title">Why most program evaluations fail before they start</div>
+        </div>
+      </div>
+      <div class="blog-row">
+        <div class="blog-date">Feb 2026</div>
+        <div>
+          <div class="blog-tag">Data methods</div>
+          <div class="blog-title">Using Stata simulate for rapid Monte Carlo power analysis</div>
+        </div>
+      </div>
+      <div class="blog-row">
+        <div class="blog-date">Jan 2026</div>
+        <div>
+          <div class="blog-tag">Field notes</div>
+          <div class="blog-title">What six months in a county health department taught me</div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:1rem;">
+      <a href="blog/index.qmd" class="btn-outline-custom">All posts →</a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     AWARDS STRIP
+═══════════════════════════════════════════════ -->
+<div class="content-section">
+  <div class="section-divider">Recognition</div>
+  <div class="trophy-shelf">
+    <div class="trophy-card">
+      <div class="trophy-star">★</div>
+      <div class="trophy-name">Public Service Excellence Award</div>
+      <div class="trophy-org">NASPE</div>
+      <div class="trophy-year">2024</div>
+    </div>
+    <div class="trophy-card">
+      <div class="trophy-star">★</div>
+      <div class="trophy-name">Emerging Evaluator Award</div>
+      <div class="trophy-org">American Evaluation Association</div>
+      <div class="trophy-year">2023</div>
+    </div>
+    <div class="trophy-card">
+      <div class="trophy-star">★</div>
+      <div class="trophy-name">HHS Innovation Grant Recipient</div>
+      <div class="trophy-org">Dept. of Health &amp; Human Services</div>
+      <div class="trophy-year">2022</div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:1rem;">
+    <a href="awards.qmd" class="btn-outline-custom">All awards →</a>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     AFFILIATIONS
+═══════════════════════════════════════════════ -->
+<div class="affil-bar">
+  <span class="affil-label">Worked with</span>
+  <span class="affil-chip">Georgetown University</span>
+  <span class="affil-chip">U.S. Dept. of Labor</span>
+  <span class="affil-chip">Urban Institute</span>
+  <span class="affil-chip">Mathematica</span>
+  <span class="affil-chip">Gates Foundation</span>
+  <span class="affil-chip">RAND Corporation</span>
+</div>
+```

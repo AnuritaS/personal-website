@@ -1,0 +1,28 @@
+---
+title: "Why most program evaluations fail before they start"
+description: "The most common failure mode in evaluation isn't bad data — it's a theory of change that was never made explicit."
+date: 2026-04-01
+categories: [Policy analysis, Evaluation design]
+---
+
+Most program evaluations are set up to fail — not because of bad data collection or poor analysis, but because the fundamental question the evaluation is supposed to answer was never made explicit before the program launched.
+
+## The design problem
+
+When a program goes live before evaluation questions are specified, you end up reverse-engineering a theory of change from whatever data happens to have been collected. This is a bit like trying to navigate by looking at where you've already been.
+
+The fix isn't complicated in principle: specify your logic model before implementation. What inputs go in? What activities happen? What outputs do you expect? What outcomes? Over what timeframe?
+
+But in practice, the political pressures to *show results* and *start delivering* almost always crowd out the time needed to do this work carefully.
+
+## What actually helps
+
+From field experience across federal and state program evaluations, the most predictive factor of a successful evaluation isn't the analyst — it's whether the program team had a documented theory of change at baseline.
+
+Three things that consistently work:
+
+1. **Embed the evaluator in the design phase**, not the post-implementation phase. An evaluator who joins after launch is a historian, not a scientist.
+2. **Specify counterfactuals explicitly.** What would have happened without this program? If you can't answer that, you can't measure impact.
+3. **Separate monitoring from evaluation.** Tracking outputs (meals served, trainings conducted) is monitoring. Measuring outcomes (food security, employment retention) is evaluation. Conflating them is how programs look successful on paper while failing their beneficiaries.
+
+The methodological sophistication comes later — in the regression model, the difference-in-differences, the matching strategy. But none of that matters if the foundation isn't right.

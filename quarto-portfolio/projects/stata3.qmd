@@ -1,0 +1,103 @@
+---
+title: "Sampling Theory, Power Analysis & Cluster RCT Design"
+description: "Monte Carlo simulation across 13,000 regressions to demonstrate sampling noise, superpopulation inference, individual and cluster-level power calculations with ICC and attrition adjustments."
+date: 2026-04-12
+categories: [Causal Inference, Power Analysis, Stata, Monte Carlo]
+image: "../assets/project-stata3-thumb.png"
+toc: true
+---
+
+```{=html}
+<div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.5rem;">
+  <span class="pill pill-blue">Stata · simulate</span>
+  <span class="pill pill-sky">Monte Carlo methods</span>
+  <span class="pill pill-teal">Power analysis</span>
+  <span class="pill pill-slate">Cluster RCT design</span>
+</div>
+
+<div style="background:#DAEEFF;border-radius:12px;padding:1.2rem 1.5rem;margin-bottom:2rem;">
+  <div style="display:flex;gap:2rem;flex-wrap:wrap;">
+    <div><div style="font-size:0.72rem;color:#4A6A88;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px;">Course</div><div style="font-size:0.9rem;font-weight:500;color:#1A3A5C;">PPOL 6818 · Georgetown University</div></div>
+    <div><div style="font-size:0.72rem;color:#4A6A88;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px;">Total simulations</div><div style="font-size:0.9rem;font-weight:500;color:#1A3A5C;">13,000 regressions</div></div>
+    <div><div style="font-size:0.72rem;color:#4A6A88;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px;">Tools</div><div style="font-size:0.9rem;font-weight:500;color:#1A3A5C;">Stata, simulate, postfile</div></div>
+    <div><div style="font-size:0.72rem;color:#4A6A88;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px;">GitHub</div><div style="font-size:0.9rem;font-weight:500;"><a href="https://github.com/gui2de/ppol6818-spring2026/pull/170" target="_blank">View code ↗</a></div></div>
+  </div>
+</div>
+```
+
+## Part 1: Sampling noise in a fixed population
+
+Generated a fixed population of **10,000 individuals** with a true Y–X relationship (seed-fixed for reproducibility), then ran 500 regression simulations at four sample sizes to quantify how estimation precision changes as we draw larger subsamples from a bounded population.
+
+**Key finding:** At N=10, beta estimates vary wildly across simulations despite being unbiased on average. At N=10,000 (the full population), all sampling variance disappears entirely — this is the finite-population ceiling.
+
+| Sample size (N) | Mean β̂ | Avg. SEM | 95% CI width | % significant |
+|---|---|---|---|---|
+| 10 | ≈ true β | High | Very wide | ~30–40% |
+| 100 | ≈ true β | Moderate | Wide | ~70–80% |
+| 1,000 | ≈ true β | Small | Narrow | ~98%+ |
+| **10,000** | **= true β** | **Near zero** | **Minimal** | **100%** |
+
+## Part 2: Sampling noise in an infinite superpopulation
+
+Extended the simulation to an infinite superpopulation DGP — generating **fresh data each run** — across **26 sample sizes**: all 20 powers of 2 (4 → 524,288) plus N = 10, 100, 1,000, 10,000, 100,000, and 1,000,000.
+
+**Why superpopulation allows N = 1,000,000:** In Part 1 the population is capped at 10,000. The superpopulation DGP draws from an infinite distribution each run — sample size is unbounded.
+
+**SEM difference:** In the superpopulation, variance shrinks as 1/√N but never hits zero. At the same N, superpopulation SEM is slightly larger than fixed-population SEM, because the fixed population's known finite structure removes a layer of uncertainty.
+
+## Part 3: Individual-level power calculations
+
+Designed a DGP where Y ~ N(0,1), treatment effect = **0.1 SD** (uniform 0.0–0.2 SD), 50/50 treatment-control split. Calculated minimum sample sizes for **80% power** under three scenarios:
+
+```{=html}
+<div class="grid-3" style="margin:1rem 0;">
+  <div class="stat-card">
+    <div class="stat-number">~3,142</div>
+    <div class="stat-label">Baseline N (80% power, 0.1 SD effect)</div>
+  </div>
+  <div class="stat-card" style="background:#D6F5F2;">
+    <div class="stat-number" style="color:#1A8A82;">~3,697</div>
+    <div class="stat-label" style="color:#1A8A82;">After 15% attrition (+18% larger)</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-number">~4,190</div>
+    <div class="stat-label">30% treatment arm (unequal split)</div>
+  </div>
+</div>
+```
+
+**Attrition:** Losing 15% of participants symmetrically inflates required sample by ~18% — you must recruit enough to *still have sufficient power after dropout*.
+
+**Unequal arms:** Shifting to 30/70 treatment-control requires a larger total N. The smaller arm is the binding constraint on precision. The 50/50 split is always the most efficient design for a fixed total N.
+
+## Part 4: Cluster RCT design — ICC = 0.3
+
+Designed a school-based intervention where treatment is assigned at the **school level** — not student level. Treatment effect = 0.2 SD (uniform 0.15–0.25 SD), ICC/ρ ≈ 0.3.
+
+**Design effect at 15 students/school:** DEFF = 1 + (15–1) × 0.3 = **5.2** — meaning you need roughly 5× as many observations as an individual-level RCT.
+
+**Power plateaus quickly:** With 200 schools fixed, power reaches ~80% around 8–16 students/school. Beyond that, adding students yields near-zero gains due to high ICC.
+
+| Scenario | Schools needed | Total students |
+|---|---|---|
+| Full compliance (100% uptake) | ~100 schools | ~1,500 |
+| **70% adoption (partial compliance)** | **~145 schools** | **~2,175** |
+
+**Partial compliance finding:** When only 70% of assigned schools implement the intervention, the required school count rises by **~45%**. Non-compliance is a design problem, not just a fidelity problem.
+
+```{=html}
+<div style="background:#F7FAFE;border:1px solid #D0DFF0;border-radius:12px;padding:1.2rem 1.5rem;margin-top:2rem;">
+  <div style="font-size:0.78rem;font-weight:600;color:#1A3A5C;margin-bottom:0.5rem;">Skills demonstrated</div>
+  <div class="pills-row">
+    <span class="pill pill-blue">Monte Carlo simulation</span>
+    <span class="pill pill-blue">Stata simulate command</span>
+    <span class="pill pill-sky">RCT design</span>
+    <span class="pill pill-sky">Power analysis</span>
+    <span class="pill pill-teal">Cluster randomization</span>
+    <span class="pill pill-teal">ICC / design effect</span>
+    <span class="pill pill-slate">Attrition modeling</span>
+    <span class="pill pill-slate">Reproducible code</span>
+  </div>
+</div>
+```

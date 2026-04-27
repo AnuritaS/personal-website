@@ -1,0 +1,106 @@
+---
+title: "Tanzania Ward Matching, Causal Debiasing & Spatial Policy Analysis"
+description: "Geospatial fuzzy matching of 3,944 Tanzanian administrative wards across a boundary change, Monte Carlo proof of collider bias, and choropleth mapping of U.S. animal welfare enforcement."
+date: 2026-04-26
+categories: [Geospatial, Causal Inference, Fuzzy Matching, Stata]
+image: "../assets/project-stata8-thumb.png"
+toc: true
+---
+
+```{=html}
+<div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.5rem;">
+  <span class="pill pill-blue">Fuzzy matching</span>
+  <span class="pill pill-sky">ArcGIS · spmap</span>
+  <span class="pill pill-teal">Causal inference</span>
+  <span class="pill pill-slate">Choropleth mapping</span>
+</div>
+
+<div style="background:#DAEEFF;border-radius:12px;padding:1.2rem 1.5rem;margin-bottom:2rem;">
+  <div style="display:flex;gap:2rem;flex-wrap:wrap;">
+    <div><div style="font-size:0.72rem;color:#4A6A88;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px;">Course</div><div style="font-size:0.9rem;font-weight:500;color:#1A3A5C;">PPOL 6818 · Georgetown University</div></div>
+    <div><div style="font-size:0.72rem;color:#4A6A88;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px;">Data scale</div><div style="font-size:0.9rem;font-weight:500;color:#1A3A5C;">3,944 wards · 1,200 simulations</div></div>
+    <div><div style="font-size:0.72rem;color:#4A6A88;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px;">Tools</div><div style="font-size:0.9rem;font-weight:500;color:#1A3A5C;">Stata, ArcGIS, spmap, shp2dta</div></div>
+    <div><div style="font-size:0.72rem;color:#4A6A88;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px;">GitHub</div><div style="font-size:0.9rem;font-weight:500;"><a href="https://github.com/gui2de/ppol6818-spring2026/pull/201/changes" target="_blank">View code ↗</a></div></div>
+  </div>
+</div>
+```
+
+## Part 1: Geospatial fuzzy matching — Tanzania ward redistricting (2010–2015)
+
+Tanzania's ward count grew from **3,333 to 3,944** between 2010 and 2015 through administrative subdivision. Matching electoral datasets across this boundary change required reconciling two non-overlapping geographic classifications — a standard problem in any longitudinal sub-national policy analysis.
+
+**Method:** Used ArcGIS shapefile intersection data (2012 and 2017 shapefiles) to compute the percentage area overlap between each 2015 ward and all candidate 2010 parent wards. Applied a 50% area-overlap threshold to classify parent-child relationships.
+
+```{=html}
+<div class="grid-4" style="margin:1rem 0;">
+  <div class="stat-card">
+    <div class="stat-number">2,705</div>
+    <div class="stat-label">Stable wards (unchanged 2010–2015)</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-number">488</div>
+    <div class="stat-label">Split into exactly 2 new wards</div>
+  </div>
+  <div class="stat-card" style="background:#D6F5F2;">
+    <div class="stat-number" style="color:#1A8A82;">45</div>
+    <div class="stat-label" style="color:#1A8A82;">Split into 3 or more wards</div>
+  </div>
+  <div class="stat-card" style="background:#DCEFFD;">
+    <div class="stat-number" style="color:#1A5E9A;">440 / 616</div>
+    <div class="stat-label" style="color:#1A5E9A;">Parentless / orphan wards</div>
+  </div>
+</div>
+```
+
+**Top regions by ward division rate:**
+
+| Region | Division rate | Context |
+|---|---|---|
+| Rukwa | 39.7% | Highest — major administrative restructuring |
+| Morogoro | 34.7% | |
+| Katavi | 28.6% | |
+| Mtwara | 28.5% | |
+| Arusha | 25.6% | |
+| Kagera | 5.0% | Lowest — minimal redistricting |
+
+**Policy relevance:** This kind of boundary reconciliation is essential for any longitudinal analysis of sub-national government data — elections, health outcomes, census linkages, or fiscal transfers.
+
+## Part 2: Debiasing treatment effect estimates — Monte Carlo simulation
+
+Designed a DGP with a **known treatment effect (β = 0.3 SD)**, then built 5 regression models varying which controls were included — confounder, mediator, and collider — running 200 simulations at each of 6 sample sizes.
+
+**Key finding:** Only Model 2 (controlling for the confounder alone) recovers β = 0.30. A larger sample size *cannot fix structural bias* — Models 1 and 5 remain wrong at N=2,500.
+
+| Model | Controls included | Bias direction | Recovers β = 0.30? |
+|---|---|---|---|
+| M1: Naive | None | Upward (~0.57) | ❌ |
+| **M2: Correct** | **Confounder only** | **None** | **✅** |
+| M3: + Mediator | Confounder + mediator | None (higher variance) | ✅ |
+| M4: Collider | Confounder + collider | Downward (~0.15) | ❌ |
+| M5: All | All covariates | Fully attenuated (~0.04) | ❌ |
+
+**Collider warning:** Including a variable caused by both treatment and outcome introduces downward bias of ~0.15 — a counterintuitive and commonly overlooked error in applied policy research that *gets worse* with more data.
+
+## Part 3: Spatial analysis — U.S. animal welfare enforcement choropleth
+
+Merged a hand-coded **Animal Welfare Penalty Harshness Index** (0–100 scale, 48 states) with U.S. Census shapefiles in Stata using `spmap`, producing a choropleth revealing stark regional disparities in enforcement.
+
+**Method:** `shp2dta` to import Census shapefiles → merge with penalty index → `spmap` with quantile color breaks → explicit handling of missing data (WY, SD) shown in legend as gray.
+
+**Finding:** Northeast and Pacific Coast states score 75+; the Deep South and Mountain West cluster below 35 — consistent with broader regulatory divergence patterns in U.S. federalism.
+
+```{=html}
+<div style="background:#F7FAFE;border:1px solid #D0DFF0;border-radius:12px;padding:1.2rem 1.5rem;margin-top:2rem;">
+  <div style="font-size:0.78rem;font-weight:600;color:#1A3A5C;margin-bottom:0.5rem;">Skills demonstrated</div>
+  <div class="pills-row">
+    <span class="pill pill-blue">Geospatial fuzzy matching</span>
+    <span class="pill pill-blue">Shapefile processing</span>
+    <span class="pill pill-sky">Panel data reconciliation</span>
+    <span class="pill pill-sky">Stata bysort / merge</span>
+    <span class="pill pill-teal">DAG reasoning</span>
+    <span class="pill pill-teal">Collider / confounder identification</span>
+    <span class="pill pill-slate">Choropleth mapping</span>
+    <span class="pill pill-slate">ArcGIS · spmap</span>
+  </div>
+</div>
+```
