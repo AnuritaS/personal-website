@@ -12,38 +12,43 @@ toc: false
   <div class="hero-inner">
     <div class="hero-left">
       <div class="hero-avatar" style="margin-bottom:1.2rem">AS</div>
-      <p class="eyebrow">Policy Strategist · Program Manager · Georgetown University</p>
+      <p class="eyebrow">Policy Strategist · Program Manager · Diplomacy</p>
       <h1 style="font-size:2.2rem;margin-bottom:0.4rem;color:#1A3A5C;">Anurita Srivastava</h1>
       <p style="font-size:1rem;color:#4A6A88;margin-bottom:1rem;">Turning evidence into programs that actually work.</p>
       <p style="font-size:0.9rem;color:#4A6A88;line-height:1.75;max-width:480px;margin-bottom:1.4rem;">
-        I work at the intersection of policy research, program evaluation, and data analytics — 
-        designing evidence-backed interventions and helping governments and nonprofits measure 
-        what actually matters.
+        I work at the intersection of policy research, program management, and strategic philanthropy-  
+        designing evidence-backed interventions and helping governments and nonprofits reallocate their resources and measure 
+        impact that actually matters.
       </p>
       <div style="display:flex;gap:0.6rem;flex-wrap:wrap;">
-        <a href="assets/cv.pdf" class="btn-primary-custom">Download CV ↓</a>
         <a href="https://linkedin.com" class="btn-outline-custom">LinkedIn ↗</a>
         <a href="https://github.com/AnuritaS" class="btn-outline-custom">GitHub ↗</a>
       </div>
     </div>
 
     <div class="hero-right">
-      <div class="stat-card">
-        <div class="stat-number">$1M+</div>
-        <div class="stat-label">Programs managed</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">18</div>
-        <div class="stat-label">Policy briefs published</div>
-      </div>
-      <div class="stat-card" style="background:#D6F5F2;">
-        <div class="stat-number" style="color:#1A8A82;">6</div>
-        <div class="stat-label" style="color:#1A8A82;">Govt. agencies served</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">5 yrs</div>
-        <div class="stat-label">Professional experience</div>
-      </div>
+
+    <div class="stat-card">
+   <div class="stat-number">$1M+</div>
+<div class="stat-label">Projects portfolio managed</div>
+    </div>
+
+  <div class="stat-card">
+    <div class="stat-number">20%</div>
+    <div class="stat-label">Increase in corporate partnerships revenue</div>
+  </div>
+
+
+  <div class="stat-card" style="background:#D6F5F2;">
+    <div class="stat-number" style="color:#1A8A82;">40+</div>
+    <div class="stat-label" style="color:#1A8A82;">Team members managed</div>
+  </div>
+
+  <div class="stat-card">
+    <div class="stat-number">20+</div>
+    <div class="stat-label">Policy panels led</div>
+  </div>
+</div>
     </div>
   </div>
 </section>
@@ -55,16 +60,17 @@ toc: false
   <div class="content-section" style="padding-top:1.5rem;padding-bottom:1.5rem;">
     <div class="section-divider">Areas of expertise</div>
     <div class="pills-row">
-      <span class="pill pill-blue">Evidence synthesis</span>
-      <span class="pill pill-sky">Program evaluation</span>
-      <span class="pill pill-teal">Causal inference</span>
+      <span class="pill pill-blue">Trust based philanthropy</span>
+      <span class="pill pill-sky">Impact investment · CSR</span>
+      <span class="pill pill-teal">People & program management</span>
       <span class="pill pill-blue">Power analysis &amp; RCT design</span>
-      <span class="pill pill-sky">Health equity</span>
-      <span class="pill pill-teal">Geospatial analysis</span>
-      <span class="pill pill-blue">Federal grant writing</span>
+      <span class="pill pill-sky">Health & gender equity</span>
+      <span class="pill pill-teal">Economic and geospatial analysis</span>
+      <span class="pill pill-blue">Event management</span>
       <span class="pill pill-sky">Stata · R · Python</span>
       <span class="pill pill-teal">Stakeholder engagement</span>
-      <span class="pill pill-slate">Data-driven strategy</span>
+      <span class="pill pill-blue">Advocacy communication</span>
+      <span class="pill pill-sky">Biodiversity finance</span>
     </div>
   </div>
 </div>
@@ -155,25 +161,22 @@ toc: false
   <div class="trophy-shelf">
     <div class="trophy-card">
       <div class="trophy-star">★</div>
-      <div class="trophy-name">Public Service Excellence Award</div>
-      <div class="trophy-org">NASPE</div>
+      <div class="trophy-name">Engineering Excellence Award</div>
+      <div class="trophy-org">Atlassian</div>
+      <div class="trophy-year">2021</div>
+    </div>
+    <div class="trophy-card">
+      <div class="trophy-star">★</div>
+      <div class="trophy-name">Learning by Giving Foundation Grant Recipient</div>
+      <div class="trophy-org">Center for Public and Nonprofit Leadership, Georgetown University</div>
       <div class="trophy-year">2024</div>
     </div>
-    <div class="trophy-card">
+       <div class="trophy-card">
       <div class="trophy-star">★</div>
-      <div class="trophy-name">Emerging Evaluator Award</div>
-      <div class="trophy-org">American Evaluation Association</div>
-      <div class="trophy-year">2023</div>
+      <div class="trophy-name">Dean's Scholarship Award</div>
+      <div class="trophy-org">Georgetown University</div>
+      <div class="trophy-year">2025</div>
     </div>
-    <div class="trophy-card">
-      <div class="trophy-star">★</div>
-      <div class="trophy-name">HHS Innovation Grant Recipient</div>
-      <div class="trophy-org">Dept. of Health &amp; Human Services</div>
-      <div class="trophy-year">2022</div>
-    </div>
-  </div>
-  <div style="text-align:center;margin-top:1rem;">
-    <a href="awards.qmd" class="btn-outline-custom">All awards →</a>
   </div>
 </div>
 
@@ -183,10 +186,10 @@ toc: false
 <div class="affil-bar">
   <span class="affil-label">Worked with</span>
   <span class="affil-chip">Georgetown University</span>
-  <span class="affil-chip">U.S. Dept. of Labor</span>
-  <span class="affil-chip">Urban Institute</span>
-  <span class="affil-chip">Mathematica</span>
-  <span class="affil-chip">Gates Foundation</span>
-  <span class="affil-chip">RAND Corporation</span>
+  <span class="affil-chip">Walking Tree</span>
+  <span class="affil-chip">Thelma Jones Breast Cancer Foundation</span>
+  <span class="affil-chip">Atlassian Corporation</span>
+  <span class="affil-chip">Apple</span>
+  <span class="affil-chip">Zomato</span>
 </div>
 ```

@@ -3,9 +3,10 @@ project:
   output-dir: _site
 
 website:
-  title: "Anurita Srivastava"
+  title: "Anu"
   description: "Policy Strategist · Program Manager · Evidence-backed impact"
   favicon: assets/favicon.ico
+  search: false
 
   navbar:
     background: "#F0F7FF"
@@ -18,8 +19,6 @@ website:
         href: projects/index.qmd
       - text: "Blog"
         href: blog/index.qmd
-      - text: "Awards"
-        href: awards.qmd
       - text: "About"
         href: about.qmd
     right:
@@ -30,17 +29,17 @@ website:
   page-footer:
     background: "#1A3A5C"
     foreground: "#B8D8F8"
-    left: "© 2026 Anurita Srivastava · Policy Strategist"
+    left: "© 2026 Anurita Srivastava"
     right:
       - icon: github
         href: https://github.com/AnuritaS
       - icon: linkedin
-        href: https://linkedin.com
+        href: https://www.linkedin.com/in/anurita-srivastava/
       - icon: envelope
-        href: mailto:your@email.com
+        href: mailto:srivastava.anurita@gmail.com
 
   open-graph:
-    title: "Anurita Srivastava — Policy Strategist"
+    title: "Anurita Srivastava — Program Manager"
     description: "Evidence-backed policy work across environment & social policy, impact evaluation, and program design."
 
 format:
