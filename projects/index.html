@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-354f72db825dbc4857cee9c7afac3516.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-a32aa014b510e3ca53d51f0ddc74ba8b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -67,9 +67,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-image','listing-title','listing-description','listing-categories','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-title','listing-description','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -88,7 +88,20 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=DM+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=DM+Sans:wght@300;400;500;600&amp;family=Baloo+2:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<script>
+  // Apply stored theme immediately, before first paint, to avoid a flash.
+  // Default is always "light" on a first visit — deliberately NOT reading
+  // prefers-color-scheme, since that follows the OS's dark mode setting,
+  // which on many systems is itself scheduled by time of day. A returning
+  // visitor's own manual toggle (saved below) is still respected.
+  (function () {
+    try {
+      var t = localStorage.getItem("anu-theme") || "light";
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -123,7 +136,7 @@ window.Quarto = {
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Anurita Srivastava — Program Manager">
 <meta property="og:description" content="Evidence-backed policy work across environment &amp; social policy, impact evaluation, and program design.">
-<meta property="og:image" content="https://AnuritaS.github.io/personal-website/assets/project-stata8-thumb.png">
+<meta property="og:image" content="https://AnuritaS.github.io/personal-website/assets/writing-samples/esg-memo-thumb.jpg">
 <meta property="og:site_name" content="Anu">
 </head>
 
@@ -148,16 +161,24 @@ window.Quarto = {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../work.html"> 
+<span class="menu-text">Work Experience</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../academic.html"> 
+<span class="menu-text">Academic</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link active" href="../projects/index.html" aria-current="page"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../blog/index.html"> 
-<span class="menu-text">Blog</span></a>
+    <a class="nav-link" href="../travel.html"> 
+<span class="menu-text">Travel</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
-<span class="menu-text">About</span></a>
+    <a class="nav-link" href="../extracurricular.html"> 
+<span class="menu-text">Off the clock</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -176,16 +197,15 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Q2F1c2FsJTIwSW5mZXJlbmNl">Causal Inference <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RnV6enklMjBNYXRjaGluZw==">Fuzzy Matching <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R2Vvc3BhdGlhbA==">Geospatial <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TW9udGUlMjBDYXJsbw==">Monte Carlo <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UG93ZXIlMjBBbmFseXNpcw==">Power Analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U3RhdGE=">Stata <span class="quarto-category-count">(2)</span></div></div></div>
+    
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
 <div class="page-hero">
-  <div class="content-section" style="padding-top:0;padding-bottom:0;">
+  <div class="content-section-impact" style="padding-top:0;padding-bottom:0;">
     <p class="eyebrow">Portfolio</p>
     <h1 style="font-size:2rem;margin-bottom:0.4rem;">Projects</h1>
     <p style="color:#4A6A88;font-size:0.9rem;max-width:520px;line-height:1.6;">
@@ -196,7 +216,44 @@ window.Quarto = {
 </div>
 <div id="listing-projects-list" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-2">
-<div class="g-col-1" data-index="0" data-categories="R2Vvc3BhdGlhbCUyQ0NhdXNhbCUyMEluZmVyZW5jZSUyQ0Z1enp5JTIwTWF0Y2hpbmclMkNTdGF0YQ==" data-listing-date-sort="1777176000000" data-listing-file-modified-sort="1777275768198" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="652">
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1782752732000" data-listing-reading-time-sort="6" data-listing-word-count-sort="1151">
+<a href="../projects/writing-samples.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../assets/writing-samples/esg-memo-thumb.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Writing Samples — Policy Memos, Research &amp; Essays
+</h5>
+<div class="card-text listing-description delink">
+<p>Policy memos, comparative research, and an academic essay written across coursework and nonprofit board work — ESG disclosure, wildlife collision prevention, climate finance…</p>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-listing-date-sort="1778817600000" data-listing-file-modified-sort="1782752732000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="370">
+<a href="../projects/philanthropy-tool.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../assets/project-philanthropy-thumb.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Philanthropy Effectiveness Evaluation Tool
+</h5>
+<div class="card-text listing-description delink">
+<p>An interactive foundation-strategy dashboard — sector allocation, geographic focus, grant concentration, OECD DAC impact scoring, and an equity lens — built on a…</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+May 15, 2026
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="R2Vvc3BhdGlhbCUyQ0NhdXNhbCUyMEluZmVyZW5jZSUyQ0Z1enp5JTIwTWF0Y2hpbmclMkNTdGF0YQ==" data-listing-date-sort="1777176000000" data-listing-file-modified-sort="1782752732000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="652">
 <a href="../projects/stata8.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -206,17 +263,6 @@ window.Quarto = {
 <h5 class="no-anchor card-title listing-title">
 Tanzania Ward Matching, Causal Debiasing &amp; Spatial Policy Analysis
 </h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('R2Vvc3BhdGlhbA=='); return false;">Geospatial</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2F1c2FsJTIwSW5mZXJlbmNl'); return false;">Causal Inference</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RnV6enklMjBNYXRjaGluZw=='); return false;">Fuzzy Matching</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U3RhdGE='); return false;">Stata</div>
-
-</div>
 <div class="card-text listing-description delink">
 <p>Geospatial fuzzy matching of 3,944 Tanzanian administrative wards across a boundary change, Monte Carlo proof of collider bias, and choropleth mapping of U.S. animal welfare…</p>
 </div>
@@ -228,7 +274,7 @@ Apr 26, 2026
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="Q2F1c2FsJTIwSW5mZXJlbmNlJTJDUG93ZXIlMjBBbmFseXNpcyUyQ1N0YXRhJTJDTW9udGUlMjBDYXJsbw==" data-listing-date-sort="1775966400000" data-listing-file-modified-sort="1777275768198" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="677">
+<div class="g-col-1" data-index="3" data-categories="Q2F1c2FsJTIwSW5mZXJlbmNlJTJDUG93ZXIlMjBBbmFseXNpcyUyQ1N0YXRhJTJDTW9udGUlMjBDYXJsbw==" data-listing-date-sort="1775966400000" data-listing-file-modified-sort="1782752732000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="677">
 <a href="../projects/stata3.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -238,17 +284,6 @@ Apr 26, 2026
 <h5 class="no-anchor card-title listing-title">
 Sampling Theory, Power Analysis &amp; Cluster RCT Design
 </h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2F1c2FsJTIwSW5mZXJlbmNl'); return false;">Causal Inference</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UG93ZXIlMjBBbmFseXNpcw=='); return false;">Power Analysis</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U3RhdGE='); return false;">Stata</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TW9udGUlMjBDYXJsbw=='); return false;">Monte Carlo</div>
-
-</div>
 <div class="card-text listing-description delink">
 <p>Monte Carlo simulation across 13,000 regressions to demonstrate sampling noise, superpopulation inference, individual and cluster-level power calculations with ICC and…</p>
 </div>
@@ -672,7 +707,7 @@ Apr 12, 2026
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2026 Anurita Srivastava</p>
+<p>© 2026 Anurita Srivastava · Made with Dribbble and Claude.ai ❤</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
@@ -701,6 +736,296 @@ Apr 12, 2026
     </div>
   </div>
 </footer>
+<script>
+(function () {
+  "use strict";
+
+  var STORAGE_KEY = "anu-theme";
+
+  function getStoredTheme() {
+    try { return localStorage.getItem(STORAGE_KEY); } catch (e) { return null; }
+  }
+
+  function storeTheme(theme) {
+    try { localStorage.setItem(STORAGE_KEY, theme); } catch (e) {}
+  }
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute("data-theme", theme);
+    var btn = document.getElementById("theme-toggle-btn");
+    if (btn) {
+      btn.textContent = theme === "dark" ? "\u2600\uFE0F" : "\uD83C\uDF19";
+      var label = theme === "dark" ? "Switch to day mode" : "Switch to night mode";
+      btn.setAttribute("aria-label", label);
+      btn.title = label;
+    }
+  }
+
+  var initial = getStoredTheme() || document.documentElement.getAttribute("data-theme") || "light";
+
+  // ── THEME TOGGLE BUTTON ──────────────────────────────────────
+  function injectToggleButton() {
+    if (document.getElementById("theme-toggle-btn")) return;
+    var btn = document.createElement("button");
+    btn.id = "theme-toggle-btn";
+    btn.className = "theme-toggle";
+    btn.type = "button";
+    btn.addEventListener("click", function () {
+      var current = document.documentElement.getAttribute("data-theme");
+      var next = current === "dark" ? "light" : "dark";
+      applyTheme(next);
+      storeTheme(next);
+    });
+    document.body.appendChild(btn);
+    applyTheme(initial);
+  }
+
+  // ── HERO SCROLL — pinned crossfade (breedlove.xyz-style) ─────
+  // hero-section is pinned via CSS position:sticky for one extra
+  // viewport's worth of scroll (see .hero-pin-wrap height). While
+  // pinned, this fades the intro layer out and the detail layer
+  // (bio/CTAs/stats) in, directly over the photo, plus a slow
+  // background zoom. Once progress hits 1 the section unpins and
+  // the rest of the page scrolls normally.
+  function initScrollZoom() {
+    var heroBg = document.getElementById("hero-bg-zoom");
+    var intro  = document.getElementById("hero-layer-intro");
+    var detail = document.getElementById("hero-layer-detail");
+    if (!heroBg) return;
+
+    var ticking = false;
+
+    function update() {
+      var scrollY  = window.scrollY || window.pageYOffset;
+      var viewportH = window.innerHeight || 1;
+      // progress 0 → 1 across the one extra viewport of scroll room
+      var progress = Math.min(Math.max(scrollY / viewportH, 0), 1);
+
+      var bgScale = 1 + progress * 0.18;
+      heroBg.style.transform = "scale(" + bgScale.toFixed(3) + ")";
+      heroBg.style.transformOrigin = "center center";
+
+      if (intro) {
+        var introOpacity = Math.max(1 - progress * 1.4, 0);
+        intro.style.opacity   = introOpacity.toFixed(3);
+        intro.style.transform = "translateY(" + (-(progress * 24)).toFixed(1) + "px)";
+        intro.style.pointerEvents = introOpacity < 0.05 ? "none" : "auto";
+      }
+
+      if (detail) {
+        detail.style.opacity   = progress.toFixed(3);
+        detail.style.transform = "translateY(" + ((1 - progress) * 16).toFixed(1) + "px)";
+        detail.style.pointerEvents = progress > 0.4 ? "auto" : "none";
+      }
+
+      ticking = false;
+    }
+
+    window.addEventListener("scroll", function () {
+      if (!ticking) { requestAnimationFrame(update); ticking = true; }
+    }, { passive: true });
+    window.addEventListener("resize", function () {
+      if (!ticking) { requestAnimationFrame(update); ticking = true; }
+    }, { passive: true });
+
+    heroBg.style.willChange = "transform";
+    update();
+  }
+
+  // ── GALAXY CONSTELLATION TOOLTIPS ────────────────────────────
+  function initGalaxyTooltips() {
+    var svg = document.querySelector(".constellation-svg");
+    if (!svg) return;
+    var tooltip = document.getElementById("galaxy-tooltip");
+    if (!tooltip) return;
+
+    var stars = svg.querySelectorAll(".star-dot");
+    stars.forEach(function (star) {
+      star.style.cursor = "pointer";
+
+      star.addEventListener("mouseenter", function (e) {
+        var stat = star.getAttribute("data-stat");
+        var ctx  = star.getAttribute("data-ctx");
+        if (!stat) return;
+
+        tooltip.innerHTML =
+          "<strong class='gtip-stat'>" + stat + "</strong>" +
+          "<span class='gtip-ctx'>" + ctx + "</span>";
+
+        // Center the tooltip in the galaxy wrapper
+        var wrap = svg.closest(".galaxy-impact");
+        var wW = wrap.offsetWidth;
+        var wH = wrap.offsetHeight;
+        var tipW = 220;
+        var tipH = 80;
+        var left = (wW - tipW) / 2;
+        var top  = (wH - tipH) / 2;
+
+        tooltip.style.left    = left + "px";
+        tooltip.style.top     = top  + "px";
+        tooltip.style.width   = tipW + "px";
+        tooltip.style.opacity = "1";
+        tooltip.style.transform = "translateY(0) scale(1)";
+
+        // Glow the hovered star
+        star.setAttribute("r", parseFloat(star.getAttribute("r")) * 1.55 + "");
+      });
+
+      star.addEventListener("mouseleave", function () {
+        tooltip.style.opacity = "0";
+        tooltip.style.transform = "translateY(4px)";
+        // Reset radius (stored in data attribute)
+        var origR = star.getAttribute("data-orig-r");
+        if (origR) { star.setAttribute("r", origR); }
+      });
+
+      // Store original radius once
+      star.setAttribute("data-orig-r", star.getAttribute("r"));
+    });
+  }
+
+  // ── CUSTOM CAT CURSOR (cat face only — no paw swap) ──────────
+  function initCatCursor() {
+    var isTouch = window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
+    if (isTouch) return;
+
+    document.documentElement.classList.add("has-custom-cursor");
+
+    var cursorEl = document.createElement("div");
+    cursorEl.id = "cat-cursor";
+
+    // ── CAT FACE ─────────────────────────────────────
+    // Nose uses --cursor-nose which is blue in BOTH modes so it
+    // never camouflages against the body colour. This is the
+    // only cursor state — it never swaps to a paw on hover,
+    // it just scales up slightly (see .is-hover in custom.scss).
+    var faceSVG =
+      '<g id="cat-face">' +
+        // Body
+        '<ellipse cx="50" cy="60" rx="32" ry="26" fill="var(--cursor-fill)"/>' +
+        // Outer ears
+        '<path d="M 22 38 L 12 12 L 38 30 Z" fill="var(--cursor-fill)"/>' +
+        '<path d="M 78 38 L 88 12 L 62 30 Z" fill="var(--cursor-fill)"/>' +
+        // Inner ear colour
+        '<path d="M 26 36 L 20 18 L 36 28 Z" fill="var(--cursor-accent)"/>' +
+        '<path d="M 74 36 L 80 18 L 64 28 Z" fill="var(--cursor-accent)"/>' +
+        // Eye whites
+        '<ellipse cx="38" cy="56" rx="5.5" ry="7" fill="var(--cursor-eye-white)"/>' +
+        '<ellipse cx="62" cy="56" rx="5.5" ry="7" fill="var(--cursor-eye-white)"/>' +
+        // Pupils
+        '<ellipse cx="38" cy="58" rx="2.8" ry="4" fill="var(--cursor-pupil)"/>' +
+        '<ellipse cx="62" cy="58" rx="2.8" ry="4" fill="var(--cursor-pupil)"/>' +
+        // BLUE NOSE — always visible in day and night mode
+        '<ellipse cx="50" cy="68" rx="3.8" ry="2.8" fill="var(--cursor-nose)"/>' +
+        // Mouth lines
+        '<path d="M 50 71 Q 44 75 40 73" stroke="var(--cursor-nose)" stroke-width="1" fill="none" opacity="0.6"/>' +
+        '<path d="M 50 71 Q 56 75 60 73" stroke="var(--cursor-nose)" stroke-width="1" fill="none" opacity="0.6"/>' +
+      '</g>';
+
+    cursorEl.innerHTML =
+      '<svg viewBox="0 0 100 100" id="cat-cursor-svg">' +
+        faceSVG +
+      '</svg>';
+
+    document.body.appendChild(cursorEl);
+
+    // Restore the last known pointer position from the previous
+    // page (this is a multi-page site, so every navigation is a
+    // full reload and JS state — including mouseX/mouseY — is
+    // lost). Without this, the cursor always re-initializes at
+    // the viewport center and only catches up to the real pointer
+    // once the user moves the mouse, which looks like the cat
+    // cursor "disappearing" after every click to a new section.
+    var CURSOR_POS_KEY = "anu-cursor-pos";
+    var startX = window.innerWidth / 2, startY = window.innerHeight / 2;
+    try {
+      var saved = JSON.parse(sessionStorage.getItem(CURSOR_POS_KEY));
+      if (saved && typeof saved.x === "number" && typeof saved.y === "number") {
+        startX = saved.x;
+        startY = saved.y;
+      }
+    } catch (e) {}
+
+    var mouseX = startX, mouseY = startY;
+    var curX   = mouseX, curY = mouseY;
+
+    document.addEventListener("mousemove", function (e) {
+      mouseX = e.clientX; mouseY = e.clientY;
+      try { sessionStorage.setItem(CURSOR_POS_KEY, JSON.stringify({ x: mouseX, y: mouseY })); } catch (err) {}
+    }, { passive: true });
+
+    var hoverSelector =
+      "a, button, .nav-tile, .acad-card, .game-card, " +
+      ".portfolio-card, .fb, .star-dot, .impact-filter-tab, " +
+      ".volunteer-card, [onclick], " +
+      "input, select, textarea, .theme-toggle";
+
+    document.addEventListener("mouseover", function (e) {
+      if (e.target.closest && e.target.closest(hoverSelector)) {
+        cursorEl.classList.add("is-hover");
+      }
+    });
+
+    document.addEventListener("mouseout", function (e) {
+      if (e.target.closest && e.target.closest(hoverSelector)) {
+        cursorEl.classList.remove("is-hover");
+      }
+    });
+
+    function animateCursor() {
+      curX += (mouseX - curX) * 0.25;
+      curY += (mouseY - curY) * 0.25;
+      cursorEl.style.left = curX + "px";
+      cursorEl.style.top  = curY + "px";
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+  }
+
+  // ── GALAXY IMPACT FILTER TABS ─────────────────────────────────
+  // Clicking a category tab dims every cluster except the one
+  // selected, similar to the tabbed "Impact" stat board pattern.
+  function initGalaxyFilters() {
+    var tabs = document.querySelectorAll(".impact-filter-tab");
+    if (!tabs.length) return;
+    var svg = document.querySelector(".constellation-svg");
+    if (!svg) return;
+
+    tabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        tabs.forEach(function (t) { t.classList.remove("on"); });
+        tab.classList.add("on");
+        var cluster = tab.getAttribute("data-cluster");
+
+        svg.querySelectorAll("[data-cluster]").forEach(function (group) {
+          if (cluster === "all" || group.getAttribute("data-cluster") === cluster) {
+            group.style.opacity = "1";
+            group.style.pointerEvents = "";
+          } else {
+            group.style.opacity = "0.12";
+            group.style.pointerEvents = "none";
+          }
+        });
+      });
+    });
+  }
+
+  // ── BOOT ────────────────────────────────────────────────────
+  function init() {
+    injectToggleButton();
+    initScrollZoom();
+    initGalaxyTooltips();
+    initGalaxyFilters();
+    initCatCursor();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();
+</script>
 
 
 

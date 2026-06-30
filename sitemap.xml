@@ -1,35 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://AnuritaS.github.io/personal-website/about.html</loc>
-    <lastmod>2026-05-19T06:00:10.192Z</lastmod>
+    <loc>https://AnuritaS.github.io/personal-website/academic.html</loc>
+    <lastmod>2026-06-29T17:05:34.000Z</lastmod>
   </url>
   <url>
-    <loc>https://AnuritaS.github.io/personal-website/blog/posts/evaluation-failure.html</loc>
-    <lastmod>2026-04-27T07:42:48.197Z</lastmod>
+    <loc>https://AnuritaS.github.io/personal-website/travel.html</loc>
+    <lastmod>2026-06-30T12:34:36.000Z</lastmod>
   </url>
   <url>
-    <loc>https://AnuritaS.github.io/personal-website/awards.html</loc>
-    <lastmod>2026-04-27T07:42:48.196Z</lastmod>
+    <loc>https://AnuritaS.github.io/personal-website/work.html</loc>
+    <lastmod>2026-06-29T17:05:32.000Z</lastmod>
   </url>
   <url>
-    <loc>https://AnuritaS.github.io/personal-website/projects/index.html</loc>
-    <lastmod>2026-04-27T07:42:48.197Z</lastmod>
+    <loc>https://AnuritaS.github.io/personal-website/projects/philanthropy-tool.html</loc>
+    <lastmod>2026-06-29T17:05:32.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AnuritaS.github.io/personal-website/projects/writing-samples.html</loc>
+    <lastmod>2026-06-29T17:05:32.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AnuritaS.github.io/personal-website/extracurricular.html</loc>
+    <lastmod>2026-06-29T17:05:32.000Z</lastmod>
   </url>
   <url>
     <loc>https://AnuritaS.github.io/personal-website/projects/stata8.html</loc>
-    <lastmod>2026-04-27T07:42:48.198Z</lastmod>
+    <lastmod>2026-06-29T17:05:32.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AnuritaS.github.io/personal-website/projects/index.html</loc>
+    <lastmod>2026-06-29T17:05:32.000Z</lastmod>
   </url>
   <url>
     <loc>https://AnuritaS.github.io/personal-website/projects/stata3.html</loc>
-    <lastmod>2026-04-27T07:42:48.198Z</lastmod>
+    <lastmod>2026-06-29T17:05:32.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AnuritaS.github.io/personal-website/awards.html</loc>
+    <lastmod>2026-06-29T17:05:32.000Z</lastmod>
   </url>
   <url>
     <loc>https://AnuritaS.github.io/personal-website/index.html</loc>
-    <lastmod>2026-05-19T06:03:29.951Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AnuritaS.github.io/personal-website/blog/index.html</loc>
-    <lastmod>2026-04-27T07:42:48.196Z</lastmod>
+    <lastmod>2026-06-30T12:34:48.000Z</lastmod>
   </url>
 </urlset>
