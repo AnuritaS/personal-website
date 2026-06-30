@@ -8,15 +8,14 @@ listing:
     sort: "date desc"
     type: grid
     grid-columns: 2
-    categories: true
-    fields: [image, title, description, categories, date]
+    fields: [image, title, description, date]
     field-display-names:
       description: "Summary"
 ---
 
 ```{=html}
 <div class="page-hero">
-  <div class="content-section" style="padding-top:0;padding-bottom:0;">
+  <div class="content-section-impact" style="padding-top:0;padding-bottom:0;">
     <p class="eyebrow">Portfolio</p>
     <h1 style="font-size:2rem;margin-bottom:0.4rem;">Projects</h1>
     <p style="color:#4A6A88;font-size:0.9rem;max-width:520px;line-height:1.6;">

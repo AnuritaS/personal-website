@@ -15,12 +15,16 @@ website:
     left:
       - text: "Home"
         href: index.qmd
+      - text: "Work Experience"
+        href: work.qmd
+      - text: "Academic"
+        href: academic.qmd
       - text: "Projects"
         href: projects/index.qmd
-      - text: "Blog"
-        href: blog/index.qmd
-      - text: "About"
-        href: about.qmd
+      - text: "Travel"
+        href: travel.qmd
+      - text: "Off the clock"
+        href: extracurricular.qmd
     right:
       - text: "Email me ↗"
         href: mailto:srivastava.anurita@gmail.com
@@ -29,7 +33,7 @@ website:
   page-footer:
     background: "#1A3A5C"
     foreground: "#B8D8F8"
-    left: "© 2026 Anurita Srivastava"
+    left: "© 2026 Anurita Srivastava · Made with Dribbble and Claude.ai ❤"
     right:
       - icon: github
         href: https://github.com/AnuritaS
@@ -54,4 +58,309 @@ format:
       - text: |
           <link rel="preconnect" href="https://fonts.googleapis.com">
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-          <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=Baloo+2:wght@500;600;700&display=swap" rel="stylesheet">
+          <script>
+            // Apply stored theme immediately, before first paint, to avoid a flash.
+            // Default is always "light" on a first visit — deliberately NOT reading
+            // prefers-color-scheme, since that follows the OS's dark mode setting,
+            // which on many systems is itself scheduled by time of day. A returning
+            // visitor's own manual toggle (saved below) is still respected.
+            (function () {
+              try {
+                var t = localStorage.getItem("anu-theme") || "light";
+                document.documentElement.setAttribute("data-theme", t);
+              } catch (e) {}
+            })();
+          </script>
+    include-after-body:
+      - text: |
+          <script>
+          (function () {
+            "use strict";
+
+            var STORAGE_KEY = "anu-theme";
+
+            function getStoredTheme() {
+              try { return localStorage.getItem(STORAGE_KEY); } catch (e) { return null; }
+            }
+
+            function storeTheme(theme) {
+              try { localStorage.setItem(STORAGE_KEY, theme); } catch (e) {}
+            }
+
+            function applyTheme(theme) {
+              document.documentElement.setAttribute("data-theme", theme);
+              var btn = document.getElementById("theme-toggle-btn");
+              if (btn) {
+                btn.textContent = theme === "dark" ? "\u2600\uFE0F" : "\uD83C\uDF19";
+                var label = theme === "dark" ? "Switch to day mode" : "Switch to night mode";
+                btn.setAttribute("aria-label", label);
+                btn.title = label;
+              }
+            }
+
+            var initial = getStoredTheme() || document.documentElement.getAttribute("data-theme") || "light";
+
+            // ── THEME TOGGLE BUTTON ──────────────────────────────────────
+            function injectToggleButton() {
+              if (document.getElementById("theme-toggle-btn")) return;
+              var btn = document.createElement("button");
+              btn.id = "theme-toggle-btn";
+              btn.className = "theme-toggle";
+              btn.type = "button";
+              btn.addEventListener("click", function () {
+                var current = document.documentElement.getAttribute("data-theme");
+                var next = current === "dark" ? "light" : "dark";
+                applyTheme(next);
+                storeTheme(next);
+              });
+              document.body.appendChild(btn);
+              applyTheme(initial);
+            }
+
+            // ── HERO SCROLL — pinned crossfade (breedlove.xyz-style) ─────
+            // hero-section is pinned via CSS position:sticky for one extra
+            // viewport's worth of scroll (see .hero-pin-wrap height). While
+            // pinned, this fades the intro layer out and the detail layer
+            // (bio/CTAs/stats) in, directly over the photo, plus a slow
+            // background zoom. Once progress hits 1 the section unpins and
+            // the rest of the page scrolls normally.
+            function initScrollZoom() {
+              var heroBg = document.getElementById("hero-bg-zoom");
+              var intro  = document.getElementById("hero-layer-intro");
+              var detail = document.getElementById("hero-layer-detail");
+              if (!heroBg) return;
+
+              var ticking = false;
+
+              function update() {
+                var scrollY  = window.scrollY || window.pageYOffset;
+                var viewportH = window.innerHeight || 1;
+                // progress 0 → 1 across the one extra viewport of scroll room
+                var progress = Math.min(Math.max(scrollY / viewportH, 0), 1);
+
+                var bgScale = 1 + progress * 0.18;
+                heroBg.style.transform = "scale(" + bgScale.toFixed(3) + ")";
+                heroBg.style.transformOrigin = "center center";
+
+                if (intro) {
+                  var introOpacity = Math.max(1 - progress * 1.4, 0);
+                  intro.style.opacity   = introOpacity.toFixed(3);
+                  intro.style.transform = "translateY(" + (-(progress * 24)).toFixed(1) + "px)";
+                  intro.style.pointerEvents = introOpacity < 0.05 ? "none" : "auto";
+                }
+
+                if (detail) {
+                  detail.style.opacity   = progress.toFixed(3);
+                  detail.style.transform = "translateY(" + ((1 - progress) * 16).toFixed(1) + "px)";
+                  detail.style.pointerEvents = progress > 0.4 ? "auto" : "none";
+                }
+
+                ticking = false;
+              }
+
+              window.addEventListener("scroll", function () {
+                if (!ticking) { requestAnimationFrame(update); ticking = true; }
+              }, { passive: true });
+              window.addEventListener("resize", function () {
+                if (!ticking) { requestAnimationFrame(update); ticking = true; }
+              }, { passive: true });
+
+              heroBg.style.willChange = "transform";
+              update();
+            }
+
+            // ── GALAXY CONSTELLATION TOOLTIPS ────────────────────────────
+            function initGalaxyTooltips() {
+              var svg = document.querySelector(".constellation-svg");
+              if (!svg) return;
+              var tooltip = document.getElementById("galaxy-tooltip");
+              if (!tooltip) return;
+
+              var stars = svg.querySelectorAll(".star-dot");
+              stars.forEach(function (star) {
+                star.style.cursor = "pointer";
+
+                star.addEventListener("mouseenter", function (e) {
+                  var stat = star.getAttribute("data-stat");
+                  var ctx  = star.getAttribute("data-ctx");
+                  if (!stat) return;
+
+                  tooltip.innerHTML =
+                    "<strong class='gtip-stat'>" + stat + "</strong>" +
+                    "<span class='gtip-ctx'>" + ctx + "</span>";
+
+                  // Center the tooltip in the galaxy wrapper
+                  var wrap = svg.closest(".galaxy-impact");
+                  var wW = wrap.offsetWidth;
+                  var wH = wrap.offsetHeight;
+                  var tipW = 220;
+                  var tipH = 80;
+                  var left = (wW - tipW) / 2;
+                  var top  = (wH - tipH) / 2;
+
+                  tooltip.style.left    = left + "px";
+                  tooltip.style.top     = top  + "px";
+                  tooltip.style.width   = tipW + "px";
+                  tooltip.style.opacity = "1";
+                  tooltip.style.transform = "translateY(0) scale(1)";
+
+                  // Glow the hovered star
+                  star.setAttribute("r", parseFloat(star.getAttribute("r")) * 1.55 + "");
+                });
+
+                star.addEventListener("mouseleave", function () {
+                  tooltip.style.opacity = "0";
+                  tooltip.style.transform = "translateY(4px)";
+                  // Reset radius (stored in data attribute)
+                  var origR = star.getAttribute("data-orig-r");
+                  if (origR) { star.setAttribute("r", origR); }
+                });
+
+                // Store original radius once
+                star.setAttribute("data-orig-r", star.getAttribute("r"));
+              });
+            }
+
+            // ── CUSTOM CAT CURSOR (cat face only — no paw swap) ──────────
+            function initCatCursor() {
+              var isTouch = window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
+              if (isTouch) return;
+
+              document.documentElement.classList.add("has-custom-cursor");
+
+              var cursorEl = document.createElement("div");
+              cursorEl.id = "cat-cursor";
+
+              // ── CAT FACE ─────────────────────────────────────
+              // Nose uses --cursor-nose which is blue in BOTH modes so it
+              // never camouflages against the body colour. This is the
+              // only cursor state — it never swaps to a paw on hover,
+              // it just scales up slightly (see .is-hover in custom.scss).
+              var faceSVG =
+                '<g id="cat-face">' +
+                  // Body
+                  '<ellipse cx="50" cy="60" rx="32" ry="26" fill="var(--cursor-fill)"/>' +
+                  // Outer ears
+                  '<path d="M 22 38 L 12 12 L 38 30 Z" fill="var(--cursor-fill)"/>' +
+                  '<path d="M 78 38 L 88 12 L 62 30 Z" fill="var(--cursor-fill)"/>' +
+                  // Inner ear colour
+                  '<path d="M 26 36 L 20 18 L 36 28 Z" fill="var(--cursor-accent)"/>' +
+                  '<path d="M 74 36 L 80 18 L 64 28 Z" fill="var(--cursor-accent)"/>' +
+                  // Eye whites
+                  '<ellipse cx="38" cy="56" rx="5.5" ry="7" fill="var(--cursor-eye-white)"/>' +
+                  '<ellipse cx="62" cy="56" rx="5.5" ry="7" fill="var(--cursor-eye-white)"/>' +
+                  // Pupils
+                  '<ellipse cx="38" cy="58" rx="2.8" ry="4" fill="var(--cursor-pupil)"/>' +
+                  '<ellipse cx="62" cy="58" rx="2.8" ry="4" fill="var(--cursor-pupil)"/>' +
+                  // BLUE NOSE — always visible in day and night mode
+                  '<ellipse cx="50" cy="68" rx="3.8" ry="2.8" fill="var(--cursor-nose)"/>' +
+                  // Mouth lines
+                  '<path d="M 50 71 Q 44 75 40 73" stroke="var(--cursor-nose)" stroke-width="1" fill="none" opacity="0.6"/>' +
+                  '<path d="M 50 71 Q 56 75 60 73" stroke="var(--cursor-nose)" stroke-width="1" fill="none" opacity="0.6"/>' +
+                '</g>';
+
+              cursorEl.innerHTML =
+                '<svg viewBox="0 0 100 100" id="cat-cursor-svg">' +
+                  faceSVG +
+                '</svg>';
+
+              document.body.appendChild(cursorEl);
+
+              // Restore the last known pointer position from the previous
+              // page (this is a multi-page site, so every navigation is a
+              // full reload and JS state — including mouseX/mouseY — is
+              // lost). Without this, the cursor always re-initializes at
+              // the viewport center and only catches up to the real pointer
+              // once the user moves the mouse, which looks like the cat
+              // cursor "disappearing" after every click to a new section.
+              var CURSOR_POS_KEY = "anu-cursor-pos";
+              var startX = window.innerWidth / 2, startY = window.innerHeight / 2;
+              try {
+                var saved = JSON.parse(sessionStorage.getItem(CURSOR_POS_KEY));
+                if (saved && typeof saved.x === "number" && typeof saved.y === "number") {
+                  startX = saved.x;
+                  startY = saved.y;
+                }
+              } catch (e) {}
+
+              var mouseX = startX, mouseY = startY;
+              var curX   = mouseX, curY = mouseY;
+
+              document.addEventListener("mousemove", function (e) {
+                mouseX = e.clientX; mouseY = e.clientY;
+                try { sessionStorage.setItem(CURSOR_POS_KEY, JSON.stringify({ x: mouseX, y: mouseY })); } catch (err) {}
+              }, { passive: true });
+
+              var hoverSelector =
+                "a, button, .nav-tile, .acad-card, .game-card, " +
+                ".portfolio-card, .fb, .star-dot, .impact-filter-tab, " +
+                ".volunteer-card, [onclick], " +
+                "input, select, textarea, .theme-toggle";
+
+              document.addEventListener("mouseover", function (e) {
+                if (e.target.closest && e.target.closest(hoverSelector)) {
+                  cursorEl.classList.add("is-hover");
+                }
+              });
+
+              document.addEventListener("mouseout", function (e) {
+                if (e.target.closest && e.target.closest(hoverSelector)) {
+                  cursorEl.classList.remove("is-hover");
+                }
+              });
+
+              function animateCursor() {
+                curX += (mouseX - curX) * 0.25;
+                curY += (mouseY - curY) * 0.25;
+                cursorEl.style.left = curX + "px";
+                cursorEl.style.top  = curY + "px";
+                requestAnimationFrame(animateCursor);
+              }
+              animateCursor();
+            }
+
+            // ── GALAXY IMPACT FILTER TABS ─────────────────────────────────
+            // Clicking a category tab dims every cluster except the one
+            // selected, similar to the tabbed "Impact" stat board pattern.
+            function initGalaxyFilters() {
+              var tabs = document.querySelectorAll(".impact-filter-tab");
+              if (!tabs.length) return;
+              var svg = document.querySelector(".constellation-svg");
+              if (!svg) return;
+
+              tabs.forEach(function (tab) {
+                tab.addEventListener("click", function () {
+                  tabs.forEach(function (t) { t.classList.remove("on"); });
+                  tab.classList.add("on");
+                  var cluster = tab.getAttribute("data-cluster");
+
+                  svg.querySelectorAll("[data-cluster]").forEach(function (group) {
+                    if (cluster === "all" || group.getAttribute("data-cluster") === cluster) {
+                      group.style.opacity = "1";
+                      group.style.pointerEvents = "";
+                    } else {
+                      group.style.opacity = "0.12";
+                      group.style.pointerEvents = "none";
+                    }
+                  });
+                });
+              });
+            }
+
+            // ── BOOT ────────────────────────────────────────────────────
+            function init() {
+              injectToggleButton();
+              initScrollZoom();
+              initGalaxyTooltips();
+              initGalaxyFilters();
+              initCatCursor();
+            }
+
+            if (document.readyState === "loading") {
+              document.addEventListener("DOMContentLoaded", init);
+            } else {
+              init();
+            }
+          })();
+          </script>

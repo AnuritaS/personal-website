@@ -6,7 +6,7 @@ toc: false
 
 ```{=html}
 <div class="page-hero">
-  <div class="content-section" style="padding-top:0;padding-bottom:0;">
+  <div class="content-section-impact" style="padding-top:0;padding-bottom:0;">
     <p class="eyebrow">Recognition</p>
     <h1 style="font-size:2rem;margin-bottom:0.4rem;">Awards &amp; Honors</h1>
     <p style="color:#4A6A88;font-size:0.9rem;max-width:500px;line-height:1.6;">
@@ -17,7 +17,7 @@ toc: false
 </div>
 
 <!-- Trophy shelf -->
-<div class="content-section">
+<div class="content-section-impact">
   <div class="section-divider">Top honors</div>
   <div class="trophy-shelf">
     <div class="trophy-card">
@@ -42,8 +42,8 @@ toc: false
 </div>
 
 <!-- Full recognition timeline -->
-<div style="background:#F7FAFE;border-top:1px solid #D0DFF0;border-bottom:1px solid #D0DFF0;">
-  <div class="content-section">
+<div class="tinted-band">
+  <div class="content-section-impact">
     <div class="section-divider">All recognition</div>
     <div class="recognition-list">
       <div class="rec-row">
@@ -107,7 +107,7 @@ toc: false
 </div>
 
 <!-- Media -->
-<div class="content-section">
+<div class="content-section-impact">
   <div class="section-divider">Media &amp; press</div>
   <div class="grid-2">
     <div style="background:#fff;border:1px solid #D0DFF0;border-radius:10px;padding:1rem 1.2rem;display:flex;gap:1rem;align-items:flex-start;">

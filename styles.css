@@ -91,7 +91,7 @@
 .rec-org { font-size: 0.75rem; color: #4A6A88; }
 
 /* ── Quarto listing overrides ── */
-.quarto-listing-container { margin-top: 1.5rem; }
+.quarto-listing-container { margin-top: 1.5rem; max-width: 1215px; margin-left: auto; margin-right: auto; padding: 0 1.5rem; }
 .listing-item {
   background: #FFFFFF !important;
   border: 1px solid #D0DFF0 !important;
@@ -115,11 +115,59 @@
 }
 
 /* ── Section wrapper ── */
-.content-section { max-width: 900px; margin: 0 auto; padding: 2.5rem 1.5rem; }
-.content-section-wide { max-width: 1100px; margin: 0 auto; padding: 2.5rem 1.5rem; }
+.content-section { max-width: 900px; margin: 0 auto; padding: 1.2rem 1.5rem 2.5rem; }
+.content-section-wide { max-width: 1100px; margin: 0 auto; padding: 1.2rem 1.5rem 2.5rem; }
+.content-section-impact { max-width: 1215px; margin: 0 auto; padding: 1.2rem 1.5rem 2.5rem; }
 
 /* ── Inline stat highlight ── */
 .stat-inline { color: #1A5E9A; font-weight: 600; }
 
 /* ── Page wrapper utility ── */
 .full-width-strip { margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); padding-left: calc(50vw - 50%); padding-right: calc(50vw - 50%); }
+
+/* ── Work highlight grid ── */
+.work-highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+@media (max-width: 700px) { .work-highlight-grid { grid-template-columns: 1fr; } }
+
+.work-link-card {
+  display: flex;
+  background: #FFFFFF;
+  border: 1px solid #D0DFF0;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.work-link-card:hover {
+  box-shadow: 0 6px 24px rgba(30,80,140,0.10);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+.wlc-bar { width: 5px; flex-shrink: 0; }
+.wlc-body { padding: 1rem 1.1rem; flex: 1; }
+.wlc-org { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: #8AA4C0; margin-bottom: 0.25rem; }
+.wlc-title { font-size: 0.92rem; font-weight: 600; color: #1A3A5C; margin-bottom: 0.35rem; line-height: 1.35; }
+.wlc-desc { font-size: 0.8rem; color: #4A6A88; line-height: 1.55; margin-bottom: 0.5rem; }
+.wlc-link { font-size: 0.75rem; color: #2E7DBF; font-weight: 500; }
+
+html[data-theme="dark"] .work-link-card {
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(180,210,255,0.1);
+}
+html[data-theme="dark"] .wlc-title { color: var(--text-heading); }
+html[data-theme="dark"] .wlc-desc { color: var(--text-body); }
+html[data-theme="dark"] .wlc-org { color: var(--text-faint); }
+html[data-theme="dark"] .wlc-link { color: var(--accent); }
+
+/* .stat-card, .travel-hero, .globe-card, .quote-block, .section-divider,
+   .travel-gallery, and .travel-photo all used to have a SECOND, separate
+   copy here that silently conflicted with the real one in custom.scss
+   (this file loads after the compiled theme, so it was winning ties).
+   That's what was overriding several earlier fixes without it being
+   obvious why. All consolidated into custom.scss as the single source
+   of truth — removed here rather than reconciled. */

@@ -44,9 +44,204 @@ $font-family-base:     $font-body;
 $navbar-bg:      $blue-50;
 $navbar-fg:      $blue-700;
 
-/*-- scss:rules --*/
+// ─── DAY / NIGHT THEME TOGGLE ────────────────────────────────────
+// Light values mirror the existing pastel palette; dark values are a
+// deep navy/charcoal variant that keeps the same blue-accent family.
+:root {
+  --bg:          #{$blue-50};
+  --bg-card:     #{$white};
+  --bg-tint:     #{$slate-50};
+  --bg-accent:   #{$blue-100};
+  --text:        #{$ink};
+  --text-heading:#{$blue-700};
+  --text-muted:  #{$slate-600};
+  --text-faint:  #{$slate-400};
+  --border:      #{$slate-200};
+  --accent:      #{$blue-500};
+  --accent-deep: #{$blue-600};
+  --navbar-bg:   #{$white};
+  --footer-bg:   #{$blue-700};
+  --footer-fg:   #{$blue-200};
+}
 
-// ─── GLOBAL BASE ────────────────────────────────────────────────
+html[data-theme="dark"] {
+  --bg:          #14202E;
+  --bg-card:     #1B2A3B;
+  --bg-tint:     #18253374;
+  --bg-accent:   #1E3349;
+  --text:        #DCE7F2;
+  --text-heading:#EAF1FA;
+  --text-muted:  #9FB4C8;
+  --text-faint:  #6E8298;
+  --border:      #2C3F54;
+  --accent:      #6FB0E8;
+  --accent-deep: #8BC2F2;
+  --navbar-bg:   #182636;
+  --footer-bg:   #0D1722;
+  --footer-fg:   #8AA4C0;
+
+  body { background: var(--bg); color: var(--text); }
+  h1, h2, h3, h4 { color: var(--text-heading); }
+  a { color: var(--accent); &:hover { color: var(--accent-deep); } }
+
+  .navbar { background: var(--navbar-bg) !important; border-bottom-color: var(--border); }
+  .navbar .navbar-brand { color: var(--text-heading) !important; }
+  .navbar .nav-link { color: var(--text-muted) !important; }
+  .navbar .nav-link:hover, .navbar .nav-link.active { color: var(--accent) !important; background: var(--bg-accent); }
+  .navbar .nav-item:last-child .nav-link { background: var(--accent-deep); color: #0D1722 !important; }
+
+  .nav-footer { background: var(--footer-bg) !important; color: var(--footer-fg); }
+
+  .hero-section, .page-hero { background: var(--bg-card); border-bottom-color: var(--border); }
+  .hero-avatar { background: var(--bg-accent); border-color: var(--accent); color: var(--accent); }
+
+  .stat-card { background: var(--bg-accent); .stat-number { color: var(--text-heading); } .stat-label { color: var(--accent); } }
+
+  .portfolio-card, .blog-list-card, .recognition-list, .listing-item {
+    background: var(--bg-card) !important;
+    border-color: var(--border) !important;
+  }
+  .card-title, .listing-item .listing-title { color: var(--text-heading) !important; }
+  .card-desc, .card-text, .listing-item .listing-description, .listing-description { color: var(--text-muted) !important; }
+  .card-tag { color: var(--accent) !important; }
+
+  .pill-blue  { background: var(--bg-accent); color: var(--text-heading); border-color: var(--border); }
+  .pill-sky, .pill-teal, .pill-slate { background: var(--bg-tint); color: var(--text-muted); border-color: var(--border); }
+
+  .timeline-item { .tl-role { color: var(--text-heading); } .tl-org { color: var(--accent); } .tl-years { color: var(--text-faint); } .tl-desc { color: var(--text-muted); } }
+  .tl-line { background: var(--border); }
+
+  .trophy-card { background: var(--bg-accent); border-color: var(--border); .trophy-name { color: var(--text-heading); } .trophy-org { color: var(--accent); } }
+
+  .affil-bar { background: var(--bg-tint); border-top-color: var(--border); }
+  .tinted-band { background: var(--bg-tint) !important; }
+  .affil-chip { background: var(--bg-card); color: var(--text-muted); }
+
+  .nav-tile { background: var(--bg-card); border-color: var(--border); }
+  .nav-tile:hover { background: var(--bg-accent); border-color: var(--accent); }
+  .tile-name { color: var(--text-heading); }
+  .tile-sub  { color: var(--text-faint); }
+
+  .acad-card { background: rgba(27, 42, 59, 0.85); border-color: var(--border); }
+  .acad-card:hover, .acad-card.sel { background: var(--bg-accent); border-color: var(--accent); }
+  .acad-deg { color: var(--text-heading); }
+  .acad-detail { background: var(--bg-accent); border-color: var(--border); color: var(--text-muted); strong { color: var(--text-heading); } }
+  .sk { background: var(--bg-tint); border-color: var(--border); color: var(--text-muted); }
+
+  .globe-card { background: var(--bg-accent); border-color: var(--border); }
+  .fb { border-color: var(--border); color: var(--text-muted); }
+  .fb.on { background: var(--bg-accent); color: var(--text-heading); border-color: var(--accent); }
+  .cp { background: var(--bg-accent); color: var(--accent-deep); border-color: var(--border); }
+
+  .game-card { background: var(--bg-card); border-color: var(--border); }
+  .game-title { color: var(--text-heading); }
+  .game-desc { color: var(--text-muted); }
+  .plat-chip { background: var(--bg-tint); color: var(--text-muted); }
+
+  .section-divider { color: var(--text-faint); &::after { background: var(--border); } }
+  .skills-group-name, .eyebrow { color: var(--text-muted); }
+
+  .theme-toggle { background: var(--bg-card); border-color: var(--border); color: var(--text-heading); }
+}
+
+// Smooth the transition between themes
+body, .navbar, .hero-section, .page-hero, .stat-card, .portfolio-card,
+.nav-tile, .acad-card, .game-card, .nav-footer, .affil-bar {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+// Theme toggle button — fixed bottom-right, sun/moon swap
+// z-index sits ABOVE the custom cat cursor (9999) so it's always clickable
+// and visible, and the cursor never visually masks it.
+.theme-toggle {
+  position: fixed;
+  bottom: calc(1.4rem + 20px);
+  right: 1.4rem;
+  z-index: 10001;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid $slate-200;
+  background: $white;
+  color: $blue-700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(30, 80, 140, 0.22);
+  transition: transform 0.2s ease, background 0.3s ease, color 0.3s ease;
+
+  &:hover { transform: scale(1.1); }
+  &:active { transform: scale(0.95); }
+}
+
+// On touch devices the custom cursor never initializes, but the toggle
+// still needs a comfortably tappable, visible target.
+@media (max-width: 600px) {
+  .theme-toggle { bottom: calc(1rem + 20px); right: 1rem; width: 44px; height: 44px; }
+}
+
+// ─── INLINE PAW TRAIL (hero-detail section) ──────────────────────
+:root {
+  --paw-trail-color: rgba(244, 160, 184, 0.55);
+}
+html[data-theme="dark"] {
+  --paw-trail-color: rgba(111, 176, 232, 0.45);
+}
+.paw-trail-inline {
+  margin: 0.6rem 0 0.4rem;
+  opacity: 0.85;
+}
+.paw-svg-inline {
+  display: block;
+}
+
+// ─── CUSTOM CAT CURSOR ────────────────────────────────────────────
+// Site-wide custom cursor with eased trailing motion. Hidden on touch
+// devices via JS feature-detect (see include-after-body script).
+// Hide the system cursor only once the JS confirms a non-touch pointer
+// (the .has-custom-cursor class is added by that script), so touch
+// devices and any JS-disabled fallback keep the normal cursor.
+html.has-custom-cursor, html.has-custom-cursor * {
+  cursor: none !important;
+}
+
+#cat-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+}
+
+#cat-cursor svg { display: block; width: 100%; height: 100%; }
+#cat-cursor.is-hover { transform: translate(-50%, -50%) scale(1.1); }
+
+// Light mode: dark cat silhouette. Dark mode: light/cream cat.
+// Driven by CSS custom properties so it flips with the day/night toggle.
+// Day mode: dark cat, PINK inner ear accent + pink nose, pink toe-bean pads
+:root {
+  --cursor-fill:      #{$ink};
+  --cursor-accent:    #F4A0B8;
+  --cursor-nose:      #F4A0B8;
+  --cursor-eye-white: #{$white};
+  --cursor-pupil:     #{$ink};
+}
+// Night mode: cream cat, blue nose still legible
+html[data-theme="dark"] {
+  --cursor-fill:      #DCE7F2;
+  --cursor-accent:    #6FB0E8;
+  --cursor-nose:      #6FB0E8;
+  --cursor-eye-white: #1B2A3B;
+  --cursor-pupil:     #6FB0E8;
+}
+
 body {
   font-family: $font-body;
   font-weight: 400;
@@ -78,6 +273,11 @@ a {
     font-family: $font-display;
     font-size: 1.1rem;
     color: $blue-700 !important;
+
+    &:hover, &:focus {
+      text-decoration: underline;
+      color: $blue-500 !important;
+    }
   }
 
   .nav-link {
@@ -114,9 +314,20 @@ a {
   background: $blue-700 !important;
   color: $blue-200;
   font-size: 0.8rem;
-  padding: 1.2rem 2rem;
+  padding: 0.6rem 2rem 1.2rem;
 
   a { color: $blue-300; &:hover { color: $white; } }
+}
+
+// The very last section before the footer on any page gets a halved
+// bottom padding (2.5rem -> 1.25rem) so the total gap into the footer
+// (which also had its own top padding halved above) comes out to half
+// of what it was, without touching the padding used BETWEEN sections
+// everywhere else on the page.
+.content-section-impact:last-of-type,
+.content-section:last-of-type,
+.content-section-wide:last-of-type {
+  padding-bottom: 1.25rem;
 }
 
 // ─── UTILITY CLASSES ────────────────────────────────────────────
@@ -150,6 +361,60 @@ a {
     color: $blue-500;
     margin-top: 0.3rem;
   }
+
+  &.stat-card-teal {
+    background: $teal-100;
+    .stat-number, .stat-label { color: $teal-600; }
+  }
+  &.stat-card-sky {
+    background: $sky-100;
+    .stat-number, .stat-label { color: $blue-600; }
+  }
+}
+
+html[data-theme="dark"] {
+  .stat-card.stat-card-teal { background: var(--bg-accent); .stat-number, .stat-label { color: var(--accent-deep); } }
+  .stat-card.stat-card-sky  { background: var(--bg-accent); .stat-number, .stat-label { color: var(--accent); } }
+}
+
+// Project-page info/note boxes (used in stata3/stata8/philanthropy-tool)
+// — used to be hardcoded inline backgrounds with no dark variant.
+.proj-infobox {
+  background: $blue-100;
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 2rem;
+}
+.proj-notebox {
+  background: $blue-50;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  margin-top: 2rem;
+}
+html[data-theme="dark"] {
+  .proj-infobox, .proj-notebox { background: var(--bg-accent); border-color: var(--border); }
+  .proj-label { color: var(--text-faint); }
+  .proj-value, .proj-notebox-title { color: var(--text-heading); }
+}
+
+.proj-label {
+  font-size: 0.72rem;
+  color: $slate-600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 2px;
+}
+.proj-value {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: $blue-700;
+}
+.proj-notebox-title {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: $blue-700;
+  margin-bottom: 0.5rem;
 }
 
 // Expertise / skill pills
@@ -219,6 +484,19 @@ a {
     font-weight: 500;
     color: $blue-600;
   }
+}
+
+// Quarto's auto-generated listing description text can end up nested
+// inside the card's own link wrapper, inheriting anchor blue + underline
+// instead of reading as plain body text — "delinking" it here so it's
+// always plain, theme-aware text regardless of where Quarto nests it.
+.card-text, .listing-description {
+  color: $slate-600;
+  text-decoration: none !important;
+}
+a:has(.listing-description) .listing-description,
+a:has(.card-text) .card-text {
+  text-decoration: none !important;
 }
 
 // Timeline (About / Experience)
@@ -337,32 +615,233 @@ a {
   &:hover { background: $blue-100; text-decoration: none; }
 }
 
-// Hero section
+// Hero section — full-bleed image with scroll-zoom (Breedlove style)
+// The photo fills the entire viewport width as a sticky background layer
+// that zooms in as the user scrolls. Text content overlays on top.
+.hero-pin-wrap {
+  position: relative;
+  // 200svh = 100svh pinned viewport + 100svh of scroll room for the
+  // crossfade. Once scrolled through, the section unpins naturally
+  // and the rest of the page continues below as normal.
+  height: 200svh;
+  // Matches every other section's bottom padding (2.5rem) so the gap
+  // into Explore (which has the standard 1.2rem top) comes out to the
+  // same 3.7rem used between every other pair of sections on the site.
+  margin-bottom: 2.5rem;
+}
+
 .hero-section {
-  background: $white;
-  padding: 4rem 2rem 3rem;
-  border-bottom: 1px solid $sky-200;
+  position: sticky;
+  top: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100svh;
+  overflow: hidden;
+  background: $blue-700;     // fallback when photo is absent
+  padding: 0;                // photo fills edge-to-edge
+
+  // ── Background photo layer (gets zoom-scaled by JS) ──
+  .hero-bg-zoom {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    will-change: transform;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    // Gradient overlay so text stays readable over any photo
+    .hero-bg-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(10, 24, 42, 0.45) 0%,
+          rgba(10, 24, 42, 0.65) 60%,
+          rgba(10, 24, 42, 0.82) 100%
+        );
+    }
+  }
+
+  // ── Stage — both layers stack here, crossfaded by scroll progress ──
+  .hero-stage {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-inner {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+    display: grid;
+    grid-template-columns: 1.1fr 0.85fr;
+    gap: 3rem;
+    align-items: center;
+    will-change: opacity, transform;
+    // No CSS transition here on purpose — opacity/transform are set
+    // every animation frame from scroll position in JS, so a transition
+    // would fight those updates and read as stutter/lag rather than a
+    // smooth 1:1 scroll-linked crossfade.
+  }
+
+  // Left text block
+  .hero-text-block {
+    color: #fff;
+
+    .eyebrow {
+      color: rgba(180, 210, 245, 0.85);
+      margin-bottom: 0.75rem;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      color: #fff;
+      margin-bottom: 0.5rem;
+      line-height: 1.1;
+    }
+
+    .hero-tagline {
+      font-size: 1.05rem;
+      color: rgba(200, 225, 245, 0.9);
+      margin-bottom: 1rem;
+      font-weight: 400;
+    }
+
+    .hero-bio {
+      font-size: 0.9rem;
+      color: rgba(180, 210, 240, 0.78);
+      line-height: 1.8;
+      max-width: 480px;
+      margin-bottom: 1.6rem;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+
+      .btn-outline-custom {
+        border-color: rgba(255, 255, 255, 0.4);
+        color: #fff;
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(4px);
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.18);
+          border-color: rgba(255, 255, 255, 0.7);
+        }
+      }
+    }
+  }
+
+  // Right stats column — glass cards over the photo
+  .hero-stats-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+
+      .stat-number { color: #fff; }
+      .stat-label  { color: rgba(200, 225, 245, 0.8); }
+
+      &:nth-child(3) {
+        background: rgba(30, 180, 170, 0.18);
+        border-color: rgba(30, 205, 180, 0.3);
+        .stat-number { color: #1ECDB4; }
+        .stat-label  { color: rgba(30, 205, 180, 0.85); }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-inner {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      padding: 0 1.2rem;
+    }
+    .hero-stats-col {
+      flex-direction: row;
+      flex-wrap: wrap;
+      .stat-card { flex: 1 1 45%; }
+    }
+  }
+
+  // Intro layer: single column, starts fully visible
+  .hero-inner-intro {
+    grid-template-columns: 1fr;
+    max-width: 760px;
+    text-align: left;
+  }
+
+  // Detail layer: starts invisible, fades/rises in over the intro
+  .hero-inner-detail {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(16px);
+  }
 }
 
-.hero-avatar {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background: $blue-100;
-  border: 2px solid $blue-300;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: $font-display;
-  font-size: 1.6rem;
-  color: $blue-600;
+
+// Dark mode: overlay darkens slightly more
+html[data-theme="dark"] .hero-section .hero-bg-overlay {
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(6, 14, 26, 0.55) 0%,
+      rgba(6, 14, 26, 0.72) 60%,
+      rgba(6, 14, 26, 0.88) 100%
+    );
 }
 
-// Page hero (inner pages)
+// Page hero (inner pages) — vertical padding only; horizontal edge
+// padding comes from the inner content-section (1.5rem), so it stays
+// consistent with every other section on the site instead of stacking.
 .page-hero {
   background: $white;
-  padding: 3rem 2rem 2rem;
-  border-bottom: 1px solid $sky-200;
+  padding: 2.5rem 0 2.5rem;
+  // No border-bottom here on purpose: the section right below already
+  // has its own section-divider line, and the two together (a full
+  // header underline + a label-divider line a short distance below)
+  // were reading as a "double line" right under every page title.
+}
+
+// ─── HERO SCROLL CUE (intro state) ───────────────────────────────
+.scroll-cue {
+  margin-top: 2.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: rgba(220, 235, 250, 0.7);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  animation: scroll-cue-bob 2.2s ease-in-out infinite;
+
+  .scroll-cue-line {
+    width: 1px;
+    height: 28px;
+    background: linear-gradient(to bottom, rgba(220,235,250,0.7), transparent);
+  }
+}
+
+@keyframes scroll-cue-bob {
+  0%, 100% { transform: translateY(0); opacity: 0.7; }
+  50%      { transform: translateY(6px); opacity: 1; }
 }
 
 // Section label divider
@@ -375,7 +854,7 @@ a {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  margin: 2rem 0 1rem;
+  margin: 1rem 0 1rem;
 
   &::after {
     content: "";
@@ -385,9 +864,885 @@ a {
   }
 }
 
+// ─── HOME — NAV TILES (Work / Academic / Projects / Travel / Gaming) ────
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.7rem;
+}
+
+.nav-tile {
+  display: block;
+  background: $white;
+  border: 1px solid $slate-200;
+  border-radius: 14px;
+  padding: 1rem 1.1rem;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+  text-decoration: none !important;
+
+  &:hover, &:focus, &:active {
+    border-color: $blue-300;
+    background: $blue-50;
+    transform: translateY(-2px);
+    text-decoration: none !important;
+  }
+
+  .tile-icon, .tile-name, .tile-sub { text-decoration: none !important; }
+  .tile-icon { font-size: 1.3rem; color: $blue-400; margin-bottom: 0.5rem; }
+  .tile-name { font-size: 0.88rem; font-weight: 500; color: $blue-700; }
+  .tile-sub  { font-size: 0.74rem; color: $slate-400; margin-top: 0.15rem; }
+}
+
+// ─── ACADEMIC PAGE ───────────────────────────────────────────────
+.acad-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+@media (max-width: 700px) {
+  .acad-grid { grid-template-columns: 1fr; }
+}
+
+.acad-card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid $slate-200;
+  border-radius: 14px;
+  padding: 1.1rem 1.2rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease;
+
+  &:hover { border-color: $blue-300; background: $blue-50; }
+  &.sel   { border: 1.5px solid $blue-400; background: $blue-100; }
+
+  .acad-icon { font-size: 1.2rem; color: $slate-400; margin-bottom: 0.4rem; }
+  .acad-deg  { font-size: 0.92rem; font-weight: 500; color: $blue-700; }
+  .acad-inst { font-size: 0.8rem; color: $blue-500; margin-top: 0.15rem; font-style: italic; }
+  .acad-yr   { font-size: 0.74rem; color: $slate-400; margin-top: 0.3rem; }
+}
+
+.acad-detail {
+  background: $blue-100;
+  border: 1px solid $blue-200;
+  border-radius: 14px;
+  padding: 1.1rem 1.25rem;
+  font-size: 0.85rem;
+  color: $slate-600;
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+
+  strong { display: block; color: $blue-700; margin-bottom: 0.4rem; }
+}
+
+.skill-section { margin-bottom: 1.4rem; }
+.skill-section-hdr {
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $slate-600;
+  margin-bottom: 0.5rem;
+}
+.skill-row { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.sk {
+  font-size: 0.78rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+  background: $slate-50;
+  border: 1px solid $slate-200;
+  color: $slate-600;
+}
+
+// Thesis / research card
+.thesis-card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid $slate-200;
+  border-left: 3px solid $blue-500;
+  border-radius: 14px;
+  padding: 1.3rem 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.thesis-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $blue-500;
+  margin-bottom: 0.5rem;
+}
+
+.thesis-title {
+  font-family: $font-display;
+  font-size: 1.15rem;
+  color: $blue-700;
+  line-height: 1.4;
+  margin-bottom: 0.6rem;
+}
+
+.thesis-desc {
+  font-size: 0.88rem;
+  color: $slate-600;
+  line-height: 1.75;
+
+  strong { color: $blue-700; }
+}
+
+.thesis-links {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+
+  a {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: $blue-600;
+  }
+}
+
+html[data-theme="dark"] {
+  .thesis-card { background: rgba(27, 42, 59, 0.85); border-color: var(--border); border-left-color: var(--accent); }
+  .thesis-tag { color: var(--accent); }
+  .thesis-title { color: var(--text-heading); }
+  .thesis-desc { color: var(--text-muted); strong { color: var(--text-heading); } }
+}
+
+// ─── TRAVEL PAGE ─────────────────────────────────────────────────
+.travel-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2rem;
+  align-items: start;
+  // 1.7rem + section-divider's 2rem top margin = 3.7rem, matching the
+  // page-hero-to-section gap above it (2.5rem page-hero bottom + 1.2rem
+  // section top) so both gaps on this page read as equal.
+  margin-bottom: 1.7rem;
+}
+
+.travel-lists { display: flex; gap: 2rem; margin-top: 1rem; }
+.tl-list h4 {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: $slate-400;
+  margin-bottom: 0.5rem;
+}
+.tl-list ul { list-style: none; font-size: 0.88rem; color: $slate-600; line-height: 2; padding: 0; }
+
+.globe-card {
+  background: $blue-100;
+  border: 1px solid $blue-200;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  gap: 0.5rem;
+
+  .globe-icon { font-size: 3rem; }
+  .globe-note { font-size: 0.8rem; color: $blue-600; font-weight: 500; }
+}
+
+.quote-block {
+  background: $teal-100;
+  border-left: 3px solid $teal-300;
+  border-radius: 0 10px 10px 0;
+  padding: 0.85rem 1.1rem;
+  font-family: $font-display;
+  font-style: italic;
+  font-size: 0.92rem;
+  color: $teal-600;
+  line-height: 1.7;
+}
+
+.filter-row { display: flex; gap: 0.45rem; flex-wrap: wrap; margin-bottom: 0.9rem; }
+.fb {
+  font-size: 0.76rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid $slate-200;
+  background: transparent;
+  color: $slate-600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+
+  &:hover { background: $blue-50; }
+  &.on { background: $blue-100; color: $blue-700; border-color: $blue-300; font-weight: 500; }
+}
+
+.cpills { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.cp {
+  font-size: 0.78rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  background: $blue-100;
+  color: $blue-600;
+  border: 1px solid $blue-200;
+}
+
+// Shared placeholder treatment for any photo tile whose image 404s —
+// used by the travel gallery and the volunteer cards below.
+.ph-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, $blue-100, $sky-100);
+  color: $slate-400;
+  font-size: 0.72rem;
+  text-align: center;
+
+  &::after { content: "Add a photo here"; }
+}
+
+// Masonry-style gallery — CSS multi-column layout lets each photo
+// keep its own natural aspect ratio (no forced crop/object-fit), so
+// tiles size themselves to whatever dimensions the uploaded photos
+// actually are, instead of a uniform cropped grid.
+.travel-gallery {
+  column-count: 3;
+  column-gap: 0.7rem;
+}
+
+.travel-photo {
+  border-radius: 14px;
+  overflow: hidden;
+  background: $slate-100;
+  border: 1px solid $slate-200;
+  margin-bottom: 0.7rem;
+  break-inside: avoid;
+
+  img { width: 100%; height: auto; display: block; }
+
+  // Placeholder tiles (no photo uploaded yet) have no intrinsic image
+  // size to size themselves by, so they get a sensible fixed height.
+  &.ph-fallback { min-height: 170px; }
+}
+
+@media (max-width: 700px) {
+  .travel-gallery { column-count: 2; }
+}
+
+@media (max-width: 460px) {
+  .travel-gallery { column-count: 1; }
+}
+
+html[data-theme="dark"] .travel-photo { background: var(--bg-accent); border-color: var(--border); }
+html[data-theme="dark"] .ph-fallback { background: linear-gradient(135deg, var(--bg-accent), var(--bg-tint)); color: var(--text-faint); }
+
+// ─── EXTRACURRICULAR PAGE — volunteer work ───────────────────────
+.volunteer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.volunteer-card {
+  background: $white;
+  border: 1px solid $slate-200;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+  &:hover { box-shadow: 0 8px 24px rgba(30, 80, 140, 0.1); transform: translateY(-2px); }
+}
+
+.volunteer-photo {
+  height: 150px;
+  background: $slate-100;
+
+  img { width: 100%; height: 100%; object-fit: cover; display: block; }
+}
+
+.volunteer-body { padding: 1rem 1.1rem; }
+.volunteer-title { font-family: $font-display; font-size: 1rem; color: $blue-700; margin-bottom: 0.2rem; }
+.volunteer-org { font-size: 0.75rem; color: $blue-500; margin-bottom: 0.5rem; }
+.volunteer-desc { font-size: 0.82rem; color: $slate-600; line-height: 1.6; }
+
+@media (max-width: 900px) { .volunteer-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .volunteer-grid { grid-template-columns: 1fr; } }
+
+html[data-theme="dark"] {
+  .volunteer-card { background: var(--bg-card); border-color: var(--border); }
+  .volunteer-photo { background: var(--bg-accent); }
+  .volunteer-title { color: var(--text-heading); }
+  .volunteer-desc { color: var(--text-muted); }
+}
+
+// ─── GAMING ───────────────────────────────────────────────────────
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.game-card {
+  background: $white;
+  border: 1px solid $slate-200;
+  border-radius: 14px;
+  padding: 1.1rem 1.2rem;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+  &:hover { box-shadow: 0 8px 24px rgba(30, 80, 140, 0.1); transform: translateY(-2px); }
+
+  .game-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+  .game-title { font-family: $font-display; font-size: 1rem; color: $blue-700; margin-bottom: 0.3rem; }
+  .game-meta { font-size: 0.75rem; color: $blue-500; margin-bottom: 0.5rem; }
+  .game-desc { font-size: 0.82rem; color: $slate-600; line-height: 1.6; }
+}
+
+.platform-row { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.6rem; }
+.plat-chip {
+  font-size: 0.7rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  background: $slate-100;
+  color: $slate-600;
+  font-weight: 500;
+}
+
+// ─── NAVBAR LINK SPACING FIX ─────────────────────────────────────
+// The active highlight bubble needs margin room so it doesn't clip
+// into adjacent nav links. Quarto adds .nav-link padding; we also
+// add left/right margin so highlighted pills breathe.
+.navbar .nav-link {
+  margin: 0 2px !important;
+}
+
+// ─── IMPACT SECTION — Galaxy constellation ─────────────────────────
+.impact-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 1rem;
+}
+
+.impact-filter-tab {
+  font-size: 0.76rem;
+  font-weight: 500;
+  padding: 0.4rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid $slate-200;
+  background: transparent;
+  color: $slate-600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+
+  &:hover { background: $blue-50; border-color: $blue-200; }
+  &.on { background: $blue-700; color: #fff; border-color: $blue-700; }
+}
+
+html[data-theme="dark"] .impact-filter-tab {
+  border-color: var(--border);
+  color: var(--text-muted);
+
+  &:hover { background: var(--bg-accent); }
+  &.on { background: var(--accent); color: #0D1722; border-color: var(--accent); }
+}
+
+.impact-cluster {
+  transition: opacity 0.35s ease;
+}
+
+.galaxy-impact {
+  position: relative;
+  background: #060F1C;
+  border-radius: 28px;
+  padding: 2.7rem 2rem 2rem;
+  overflow: visible;
+}
+
+.constellation-svg {
+  width: 100%;
+  display: block;
+
+  .star-label {
+    font-family: $font-display;
+    font-size: 13px;
+    font-weight: 600;
+    fill: rgba(200, 225, 245, 0.85);
+    pointer-events: none;
+  }
+
+  .cluster-label {
+    font-family: $font-body;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    pointer-events: none;
+  }
+
+  .star-dot {
+    transition: r 0.15s ease;
+    cursor: pointer;
+  }
+
+  // Pulsing glow rings on anchor stars
+  .star-pulse {
+    animation: star-pulse-anim 2.8s ease-in-out infinite;
+    pointer-events: none;
+  }
+}
+
+@keyframes star-pulse-anim {
+  0%, 100% { opacity: 0.18; r: auto; }
+  50%       { opacity: 0.38; }
+}
+
+// Floating tooltip that appears on star hover
+.galaxy-tooltip {
+  position: absolute;
+  background: rgba(12, 28, 52, 0.97);
+  border: 1px solid rgba(111, 176, 232, 0.45);
+  border-radius: 14px;
+  padding: 1.1rem 1.4rem;
+  pointer-events: none;
+  white-space: normal;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(4px) scale(0.96);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  z-index: 10;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.45), 0 0 0 1px rgba(111,176,232,0.12);
+
+  .gtip-stat {
+    display: block;
+    font-family: $font-display;
+    font-size: 1.55rem;
+    color: #6FB0E8;
+    line-height: 1.1;
+    margin-bottom: 0.35rem;
+  }
+
+  .gtip-ctx {
+    font-size: 0.8rem;
+    color: rgba(180, 210, 240, 0.82);
+    display: block;
+    line-height: 1.5;
+  }
+}
+
+.galaxy-hint {
+  text-align: center;
+  font-size: 0.74rem;
+  color: rgba(120, 150, 185, 0.5);
+  margin-top: 0.85rem;
+  font-style: italic;
+  letter-spacing: 0.03em;
+}
+
+// Dark mode: galaxy already has its own dark bg, just make sure
+// the surrounding section doesn't fight it
+html[data-theme="dark"] .galaxy-impact {
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+// ─── OLD IMPACT STYLES (kept for any other pages that reference them) ──
+.impact-wrap { margin-bottom: 0.5rem; }
+
+.impact-cat { margin-bottom: 1.6rem; }
+.impact-cat-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: $slate-400;
+  margin-bottom: 0.65rem;
+}
+
+.impact-row { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+
+.impact-stat {
+  background: $slate-50;
+  border-radius: 10px;
+  padding: 0.75rem 1.05rem;
+  min-width: 150px;
+  flex: 1 1 auto;
+  cursor: default;
+  transition: background 0.15s ease, transform 0.15s ease;
+
+  &:hover {
+    background: $blue-100;
+    transform: translateY(-2px);
+    .impact-num { color: $blue-600; }
+  }
+}
+
+.impact-num {
+  font-family: $font-display;
+  font-size: 1.4rem;
+  color: $blue-700;
+  line-height: 1;
+}
+
+.impact-ctx {
+  font-size: 0.76rem;
+  color: $slate-600;
+  margin-top: 0.3rem;
+  line-height: 1.4;
+}
+
+.impact-note {
+  font-size: 0.78rem;
+  color: $slate-400;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+html[data-theme="dark"] {
+  .impact-stat { background: var(--bg-tint); }
+  .impact-stat:hover { background: var(--bg-accent); .impact-num { color: var(--accent); } }
+  .impact-num { color: var(--text-heading); }
+  .impact-ctx { color: var(--text-muted); }
+  .impact-cat-label, .impact-note { color: var(--text-faint); }
+}
+
 // Responsive
 @media (max-width: 768px) {
   .hero-section { padding: 2rem 1rem; }
-  .page-hero { padding: 2rem 1rem; }
+  .page-hero { padding: 2rem 0 1.5rem; }
   .stat-card .stat-number { font-size: 1.4rem; }
+  .tile-grid, .acad-grid, .game-grid { grid-template-columns: 1fr; }
+  .travel-hero { grid-template-columns: 1fr; }
+  .travel-lists { gap: 1.2rem; }
+  .impact-stat { min-width: 130px; }
 }
+
+// ═══════════════════════════════════════════════════════════════
+// OFF THE CLOCK — illustrated full-page background (extracurricular.qmd)
+// Original artwork only: dusk sky, hills, drifting clouds, rising
+// fireflies, two simple bird silhouettes, and one small original
+// lantern-spirit character. Deliberately its own visual register —
+// Baloo 2 + warm cream panels — distinct from the rest of the site.
+// ═══════════════════════════════════════════════════════════════
+.offclock-scene {
+  position: relative;
+}
+
+.offclock-bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: -1;
+
+  svg { width: 100%; height: 100%; display: block; }
+}
+
+.offclock-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1215px;
+  margin: 0 auto;
+  padding: 1.2rem 1.5rem 4.5rem;
+  font-family: $font-display;
+}
+
+.offclock-eyebrow {
+  font-family: 'Baloo 2', sans-serif;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  text-shadow: 0 2px 8px rgba(20, 30, 40, 0.4);
+}
+
+.offclock-title {
+  font-family: 'Baloo 2', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 0 3px 14px rgba(20, 30, 40, 0.45);
+  margin: 0.3rem 0 1rem;
+  max-width: 620px;
+  line-height: 1.2;
+}
+
+html[data-theme="dark"] .offclock-title {
+  color: #191970; // midnight blue
+}
+
+.offclock-lede {
+  font-family: $font-body;
+  color: #F3EEDD;
+  text-shadow: 0 2px 8px rgba(20, 30, 40, 0.45);
+  max-width: 540px;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  margin-bottom: 2.2rem;
+}
+
+.offclock-panel {
+  background: rgba(255, 253, 246, 0.94);
+  border-radius: 20px;
+  padding: 1.5rem 1.6rem;
+  margin-bottom: 1.3rem;
+  box-shadow: 0 10px 30px rgba(20, 30, 20, 0.18);
+
+  h3 {
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 600;
+    color: #3E5C3A;
+    font-size: 1.1rem;
+    margin: 0 0 0.9rem;
+  }
+}
+
+html[data-theme="dark"] .offclock-panel h3 {
+  color: #191970; // midnight blue, matching the page title treatment
+}
+
+.offclock-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.9rem;
+}
+
+.offclock-card {
+  background: #fff;
+  border: 1px solid #EDE6D2;
+  border-radius: 14px;
+  padding: 1rem 1.1rem;
+  overflow: hidden;
+
+  .oc-icon { font-size: 1.6rem; }
+  .oc-title { font-family: 'Baloo 2', sans-serif; font-weight: 600; font-size: 1rem; margin: 0.25rem 0 0.1rem; color: #3E5C3A; }
+  .oc-meta { font-family: $font-body; font-size: 0.74rem; color: #8A9A78; margin-bottom: 0.3rem; }
+  .oc-desc { font-family: $font-body; font-size: 0.82rem; color: #5B6E52; line-height: 1.55; }
+
+  // Photo variant — image fills the top of the card, edge-to-edge,
+  // text sits below in the normal padded area.
+  &.has-photo {
+    padding: 0;
+
+    .oc-photo {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+    }
+    .oc-photo-body { padding: 0.9rem 1.1rem 1rem; }
+  }
+}
+
+// Gaming cards specifically — image height increased 25% from the
+// volunteer/other-activities cards' (already-reduced) base size.
+.gaming-panel .offclock-card.has-photo .oc-photo {
+  aspect-ratio: 32 / 15;
+}
+
+@media (max-width: 640px) {
+  .offclock-grid { grid-template-columns: 1fr; }
+  .offclock-title { font-size: 1.6rem; }
+}
+
+// Scene animations
+@keyframes oc-drift   { 0% { transform: translateX(0); } 100% { transform: translateX(60px); } }
+@keyframes oc-glow      { 0%, 100% { opacity: 0.55; } 50% { opacity: 1; } }
+@keyframes oc-floatup   { 0% { transform: translateY(0) translateX(0); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateY(-220px) translateX(18px); opacity: 0; } }
+
+.oc-cloud      { animation: oc-drift 38s linear infinite alternate; }
+.oc-lantern    { animation: oc-glow 3.4s ease-in-out infinite; }
+.oc-lantern-glow { animation: oc-glow 3.4s ease-in-out infinite; }
+.oc-firefly    { animation: oc-floatup linear infinite; }
+.oc-bird-wing  { transform-origin: center; }
+
+@media (prefers-reduced-motion: reduce) {
+  .oc-cloud, .oc-lantern, .oc-lantern-glow, .oc-firefly, .oc-bird-wing {
+    animation: none;
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════
+// ACADEMIC — full-page photo mosaic background (academic.qmd)
+// Tiled grid of college photos behind the whole page, with content
+// sitting in translucent panels on top so text stays legible.
+// ═══════════════════════════════════════════════════════════════
+.acad-photo-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.acad-photo-tile {
+  position: relative;
+  overflow: hidden;
+  background: $slate-100;
+
+  img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  &.ph-fallback {
+    background: repeating-linear-gradient(135deg, $blue-100, $blue-100 14px, $blue-50 14px, $blue-50 28px);
+  }
+}
+
+.acad-photo-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 38, 64, 0.62);
+}
+
+.acad-page-content {
+  position: relative;
+  z-index: 1;
+}
+
+.acad-panel {
+  background: transparent;
+  // No margin of its own — relies purely on content-section-impact's
+  // own padding for spacing, same as every other page on the site.
+  // (Used to add an extra 1.2rem margin here, which compounded with
+  // the section's padding and made Academic's rhythm differ from
+  // Work/Awards/Travel — that's the bug being fixed.)
+
+  &.page-hero {
+    background: rgba(255, 255, 255, 0.85);
+    border-bottom: none;
+    padding: 2.5rem 0 2.5rem;
+
+    .eyebrow { color: $blue-500; }
+    h1 { color: $blue-700; }
+    .acad-hero-desc { color: $slate-600; }
+  }
+}
+
+html[data-theme="dark"] .acad-panel.page-hero { background: rgba(20, 32, 46, 0.85); }
+
+// Pills on the academic page specifically get a lower-opacity fill so
+// the photo background shows through — other pages keep the solid
+// pill colors defined above untouched.
+.acad-page-content {
+  .pill-blue { background: rgba(218, 238, 255, 0.85); }
+  .pill-sky  { background: rgba(220, 239, 253, 0.85); }
+  .pill-teal { background: rgba(214, 245, 242, 0.85); }
+}
+html[data-theme="dark"] .acad-page-content {
+  .pill-blue, .pill-sky, .pill-teal { background: rgba(30, 51, 73, 0.85); }
+}
+html[data-theme="dark"] .acad-panel.page-hero .eyebrow { color: var(--accent); }
+html[data-theme="dark"] .acad-panel.page-hero h1 { color: var(--text-heading); }
+html[data-theme="dark"] .acad-panel.page-hero .acad-hero-desc { color: var(--text-muted); }
+
+// Loose captions elsewhere on the academic page that aren't inside a
+// card (e.g. the small hint lines under Certifications / Thesis) —
+// same halo treatment so they stay readable over the photos.
+.acad-loose-text {
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.95), 0 0 14px rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+  .acad-photo-bg { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(6, 1fr); }
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.7rem;
+  margin-top: 0.8rem;
+}
+
+.cert-card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid $slate-200;
+  border-radius: 12px;
+  padding: 0.9rem 0.7rem;
+  text-align: center;
+
+  .cert-icon { font-size: 1.4rem; margin-bottom: 0.4rem; }
+  .cert-name { font-size: 0.76rem; color: $blue-700; line-height: 1.35; font-weight: 500; }
+}
+
+html[data-theme="dark"] {
+  .cert-card { background: rgba(27, 42, 59, 0.85); border-color: var(--border); .cert-name { color: var(--text-heading); } }
+}
+
+@media (max-width: 768px) {
+  .cert-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+// ─── WRITING SAMPLES — memo cards with PDF snapshot + download ─────
+.ws-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.3rem;
+}
+
+.ws-card {
+  background: $white;
+  border: 1px solid $slate-200;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.ws-thumb-link { display: block; background: $slate-100; }
+.ws-thumb {
+  width: 100%;
+  display: block;
+  max-height: 220px;
+  object-fit: cover;
+  object-position: top center;
+  border-bottom: 1px solid $slate-200;
+}
+
+.ws-body { padding: 1.1rem 1.2rem 1.3rem; display: flex; flex-direction: column; gap: 0.4rem; }
+.ws-tag {
+  font-family: $font-body;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: $blue-500;
+  text-transform: uppercase;
+}
+.ws-title { font-family: $font-display; font-size: 1rem; color: $blue-700; line-height: 1.3; }
+.ws-desc { font-size: 0.83rem; color: $slate-600; line-height: 1.6; margin-bottom: 0.3rem; }
+
+@media (max-width: 768px) {
+  .ws-grid { grid-template-columns: 1fr; }
+}
+
+html[data-theme="dark"] {
+  .ws-card { background: var(--bg-card); border-color: var(--border); }
+  .ws-thumb-link { background: var(--bg-accent); }
+  .ws-tag { color: var(--accent); }
+  .ws-title { color: var(--text-heading); }
+  .ws-desc { color: var(--text-muted); }
+}
+
+// ─── PROJECTS LISTING — round Quarto's auto-generated grid cards ───
+// Quarto's listing engine renders each project through Bootstrap's
+// .card component. Overriding Bootstrap's own border-radius CSS
+// variables (which its .card rule reads from) is more robust than
+// targeting Quarto's wrapper class names directly, since those can
+// vary by version and the variable override can't be missed.
+:root {
+  --bs-border-radius: 14px;
+  --bs-border-radius-lg: 14px;
+  --bs-card-border-radius: 14px;
+  --bs-card-inner-border-radius: 14px;
+}
+
+.card, .quarto-grid-item .card, a.quarto-grid-link .card {
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  box-shadow: none !important;
+  border: 1px solid $slate-200 !important;
+}
+.card img, .card-img, .card-img-top, .thumbnail-image img {
+  border-radius: 0 !important;
+}
+
+html[data-theme="dark"] .card { background: var(--bg-card) !important; border-color: var(--border) !important; }
+
+// Tinted full-width bands ("By the numbers", "Languages", "All
+// recognition", etc.) — was a hardcoded inline background:#F7FAFE
+// before, which is why it never changed in dark mode no matter what
+// the rest of the page did. Now a real class with a dark variant.
+.tinted-band { background: #F7FAFE; }

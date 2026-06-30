@@ -2,7 +2,6 @@
 title: "Tanzania Ward Matching, Causal Debiasing & Spatial Policy Analysis"
 description: "Geospatial fuzzy matching of 3,944 Tanzanian administrative wards across a boundary change, Monte Carlo proof of collider bias, and choropleth mapping of U.S. animal welfare enforcement."
 date: 2026-04-26
-categories: [Geospatial, Causal Inference, Fuzzy Matching, Stata]
 image: "../assets/project-stata8-thumb.png"
 toc: true
 ---
@@ -15,12 +14,12 @@ toc: true
   <span class="pill pill-slate">Choropleth mapping</span>
 </div>
 
-<div style="background:#DAEEFF;border-radius:12px;padding:1.2rem 1.5rem;margin-bottom:2rem;">
+<div class="proj-infobox">
   <div style="display:flex;gap:2rem;flex-wrap:wrap;">
-    <div><div style="font-size:0.72rem;color:#4A6A88;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px;">Course</div><div style="font-size:0.9rem;font-weight:500;color:#1A3A5C;">PPOL 6818 · Georgetown University</div></div>
-    <div><div style="font-size:0.72rem;color:#4A6A88;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px;">Data scale</div><div style="font-size:0.9rem;font-weight:500;color:#1A3A5C;">3,944 wards · 1,200 simulations</div></div>
-    <div><div style="font-size:0.72rem;color:#4A6A88;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px;">Tools</div><div style="font-size:0.9rem;font-weight:500;color:#1A3A5C;">Stata, ArcGIS, spmap, shp2dta</div></div>
-    <div><div style="font-size:0.72rem;color:#4A6A88;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px;">GitHub</div><div style="font-size:0.9rem;font-weight:500;"><a href="https://github.com/gui2de/ppol6818-spring2026/pull/201/changes" target="_blank">View code ↗</a></div></div>
+    <div><div class="proj-label">Course</div><div class="proj-value">PPOL 6818 · Georgetown University</div></div>
+    <div><div class="proj-label">Data scale</div><div class="proj-value">3,944 wards · 1,200 simulations</div></div>
+    <div><div class="proj-label">Tools</div><div class="proj-value">Stata, ArcGIS, spmap, shp2dta</div></div>
+    <div><div class="proj-label">GitHub</div><div class="proj-value"><a href="https://github.com/gui2de/ppol6818-spring2026/pull/201/changes" target="_blank">View code ↗</a></div></div>
   </div>
 </div>
 ```
@@ -41,13 +40,13 @@ Tanzania's ward count grew from **3,333 to 3,944** between 2010 and 2015 through
     <div class="stat-number">488</div>
     <div class="stat-label">Split into exactly 2 new wards</div>
   </div>
-  <div class="stat-card" style="background:#D6F5F2;">
-    <div class="stat-number" style="color:#1A8A82;">45</div>
-    <div class="stat-label" style="color:#1A8A82;">Split into 3 or more wards</div>
+  <div class="stat-card stat-card-teal">
+    <div class="stat-number">45</div>
+    <div class="stat-label">Split into 3 or more wards</div>
   </div>
-  <div class="stat-card" style="background:#DCEFFD;">
-    <div class="stat-number" style="color:#1A5E9A;">440 / 616</div>
-    <div class="stat-label" style="color:#1A5E9A;">Parentless / orphan wards</div>
+  <div class="stat-card stat-card-sky">
+    <div class="stat-number">440 / 616</div>
+    <div class="stat-label">Parentless / orphan wards</div>
   </div>
 </div>
 ```
@@ -90,8 +89,8 @@ Merged a hand-coded **Animal Welfare Penalty Harshness Index** (0–100 scale, 4
 **Finding:** Northeast and Pacific Coast states score 75+; the Deep South and Mountain West cluster below 35 — consistent with broader regulatory divergence patterns in U.S. federalism.
 
 ```{=html}
-<div style="background:#F7FAFE;border:1px solid #D0DFF0;border-radius:12px;padding:1.2rem 1.5rem;margin-top:2rem;">
-  <div style="font-size:0.78rem;font-weight:600;color:#1A3A5C;margin-bottom:0.5rem;">Skills demonstrated</div>
+<div class="proj-notebox">
+  <div class="proj-notebox-title">Skills demonstrated</div>
   <div class="pills-row">
     <span class="pill pill-blue">Geospatial fuzzy matching</span>
     <span class="pill pill-blue">Shapefile processing</span>

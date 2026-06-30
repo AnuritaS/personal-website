@@ -1,4 +1,4 @@
-# Anurita Sharma — Portfolio Website
+# Anu — Portfolio Website
 
 A Quarto-based personal portfolio for a policy strategist and program manager.  
 Built with a pastel blue palette, DM Serif Display + DM Sans typography, and a clean editorial aesthetic.

@@ -2,14 +2,10 @@
   {
     "listing": "/projects/index.html",
     "items": [
+      "/projects/writing-samples.html",
+      "/projects/philanthropy-tool.html",
       "/projects/stata8.html",
       "/projects/stata3.html"
-    ]
-  },
-  {
-    "listing": "/blog/index.html",
-    "items": [
-      "/blog/posts/evaluation-failure.html"
     ]
   }
 ]

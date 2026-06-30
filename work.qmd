@@ -1,0 +1,163 @@
+---
+title: ""
+page-layout: full
+toc: false
+---
+
+```{=html}
+<div class="page-hero">
+  <div class="content-section-impact" style="padding-top:0;padding-bottom:0;">
+    <p class="eyebrow">Work Experience</p>
+    <h1 style="font-size:2rem;margin-bottom:0.3rem;">Anurita Srivastava</h1>
+    <p style="color:#4A6A88;font-size:0.95rem;max-width:520px;line-height:1.6;">
+      Seven years across product engineering, program management, and policy strategy — translating evidence into programs that actually work.
+    </p>
+  </div>
+</div>
+
+<!-- Top Stats -->
+<div class="tinted-band">
+  <div class="content-section-impact">
+    <div class="section-divider">By the numbers</div>
+    <div class="grid-4" style="gap:0.75rem;margin-top:0.5rem;">
+      <div class="stat-card">
+        <div class="stat-number">7+</div>
+        <div class="stat-label">Years of experience</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">$1M+</div>
+        <div class="stat-label">Program portfolio managed</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">40+</div>
+        <div class="stat-label">Team members managed</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">5</div>
+        <div class="stat-label">Countries worked across</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">20%</div>
+        <div class="stat-label">Philanthropic revenue increase</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">48%</div>
+        <div class="stat-label">Faster data response speeds</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">28%</div>
+        <div class="stat-label">Revenue growth via financial modeling</div>
+      </div>
+      <div class="stat-card" style="background:#D6F5F2;">
+        <div class="stat-number" style="color:#1A8A82;">1</div>
+        <div class="stat-label" style="color:#1A8A82;">AI patent filed</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Highlights & Links -->
+<div class="content-section-impact">
+  <div class="section-divider">Project Spotlights</div>
+  <p style="font-size:0.85rem;color:#4A6A88;margin-bottom:1.2rem;">
+    Full work experience detail is in my <a href="https://linkedin.com/in/anurita-srivastava" class="card-link">resume ↗</a>. Below are a few public highlights from across my career.
+  </p>
+
+  <div class="work-highlight-grid">
+
+    <a href="https://walkingtree.tech/walkingtree-technologies-attains-select-tier-status-aws-partner-network/" target="_blank" rel="noopener" class="work-link-card">
+      <div class="wlc-bar" style="background:#FF9900;"></div>
+      <div class="wlc-body">
+        <div class="wlc-org">WalkingTree Technologies</div>
+        <div class="wlc-title">AWS Partner Network — Select Tier status</div>
+        <div class="wlc-desc">As Project Manager, owned a slice of strategy and operations work focused on cost reduction — part of the broader push that contributed to WalkingTree attaining Select Tier status in the AWS Partner Network.</div>
+        <div class="wlc-link">Read the announcement ↗</div>
+      </div>
+    </a>
+
+    <a href="https://slack.com/blog/news/atlassian-and-slack-partnership" target="_blank" rel="noopener" class="work-link-card">
+      <div class="wlc-bar" style="background:#4A154B;"></div>
+      <div class="wlc-body">
+        <div class="wlc-org">Atlassian × Slack</div>
+        <div class="wlc-title">Strategic partnership announcement</div>
+        <div class="wlc-desc">Contributed to the integration work that underpinned the Atlassian–Slack partnership, shipping features used by millions.</div>
+        <div class="wlc-link">Read on Slack Blog ↗</div>
+      </div>
+    </a>
+
+    <a href="https://www.apple.com/newsroom/2019/10/first-year-of-apple-entrepreneur-camp-offers-invaluable-experiences-to-100-innovators/" target="_blank" rel="noopener" class="work-link-card">
+      <div class="wlc-bar" style="background:#1d1d1f;"></div>
+      <div class="wlc-body">
+        <div class="wlc-org">Apple</div>
+        <div class="wlc-title">Apple Entrepreneur Camp — Cohort 4</div>
+        <div class="wlc-desc">Competitively selected to represent Wysa at Apple's Entrepreneur Camp in Cupertino, CA (2019) — among 100 innovators worldwide, Cohort 4.</div>
+        <div class="wlc-link">Read on Apple Newsroom ↗</div>
+      </div>
+    </a>
+
+    <a href="https://www.zomato.com/blog/contactless-dining/" target="_blank" rel="noopener" class="work-link-card">
+      <div class="wlc-bar" style="background:#E23744;"></div>
+      <div class="wlc-body">
+        <div class="wlc-org">Zomato</div>
+        <div class="wlc-title">Contactless Dining — product launch</div>
+        <div class="wlc-desc">Led end-to-end incubation of Contactless Dining in 2020, from ideation through final software release. Promoted twice during tenure.</div>
+        <div class="wlc-link">Read on Zomato Blog ↗</div>
+      </div>
+    </a>
+
+    <a href="https://www.linkedin.com/posts/foodforpaws-zerohunger-feedingindia-share-6709718883898580992-bk2L/" target="_blank" rel="noopener" class="work-link-card">
+      <div class="wlc-bar" style="background:#1ECDB4;"></div>
+      <div class="wlc-body">
+        <div class="wlc-org">Feeding India (Zomato NGO)</div>
+        <div class="wlc-title">Animal welfare volunteer program</div>
+        <div class="wlc-desc">Served as a volunteer program officer for Feeding India's food-for-paws initiative, supporting community-level animal welfare programming.</div>
+        <div class="wlc-link">View on LinkedIn ↗</div>
+      </div>
+    </a>
+
+    <a href="https://blogs.wysa.io/blog/wysa-news/new-stress-and-coping-tool-features-wysa-to-help-singaporeans-in-a-post-pandemic-world-adjust-to-life-in-a-new-normal" target="_blank" rel="noopener" class="work-link-card">
+      <div class="wlc-bar" style="background:#6FB0E8;"></div>
+      <div class="wlc-body">
+        <div class="wlc-org">Wysa</div>
+        <div class="wlc-title">Mental health tool for Singapore — post-pandemic launch</div>
+        <div class="wlc-desc">Contributed features to Wysa's AI mental health chatbot, including accessibility improvements and premium conversion pipeline. Accepted pre-placement offer after internship.</div>
+        <div class="wlc-link">Read on Wysa Blog ↗</div>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<!-- Languages -->
+<div class="tinted-band">
+  <div class="content-section-impact">
+    <div class="section-divider">Languages</div>
+    <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.5rem;">
+      <span class="pill pill-blue">English — native</span>
+      <span class="pill pill-teal">Hindi — native</span>
+      <span class="pill pill-sky">Spanish — conversational</span>
+      <span class="pill pill-blue">French — beginner</span>
+      <span class="pill pill-teal">German — beginner</span>
+    </div>
+  </div>
+</div>
+
+<!-- Areas of expertise (moved here from the homepage) -->
+<div class="content-section-impact">
+  <div class="section-divider">Areas of expertise</div>
+  <div class="pills-row">
+    <span class="pill pill-blue">Trust based philanthropy</span>
+    <span class="pill pill-sky">Impact investment · CSR</span>
+    <span class="pill pill-teal">People & program management</span>
+    <span class="pill pill-blue">Power analysis &amp; RCT design</span>
+    <span class="pill pill-sky">Health & gender equity</span>
+    <span class="pill pill-teal">Economic and geospatial analysis</span>
+    <span class="pill pill-blue">Event management</span>
+    <span class="pill pill-sky">Stata · R · Python</span>
+    <span class="pill pill-teal">Stakeholder engagement</span>
+    <span class="pill pill-blue">Advocacy communication</span>
+    <span class="pill pill-sky">Biodiversity finance</span>
+  </div>
+</div>
+```

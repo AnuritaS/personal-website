@@ -2,7 +2,6 @@
 title: "Sampling Theory, Power Analysis & Cluster RCT Design"
 description: "Monte Carlo simulation across 13,000 regressions to demonstrate sampling noise, superpopulation inference, individual and cluster-level power calculations with ICC and attrition adjustments."
 date: 2026-04-12
-categories: [Causal Inference, Power Analysis, Stata, Monte Carlo]
 image: "../assets/project-stata3-thumb.png"
 toc: true
 ---
@@ -15,12 +14,12 @@ toc: true
   <span class="pill pill-slate">Cluster RCT design</span>
 </div>
 
-<div style="background:#DAEEFF;border-radius:12px;padding:1.2rem 1.5rem;margin-bottom:2rem;">
+<div class="proj-infobox">
   <div style="display:flex;gap:2rem;flex-wrap:wrap;">
-    <div><div style="font-size:0.72rem;color:#4A6A88;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px;">Course</div><div style="font-size:0.9rem;font-weight:500;color:#1A3A5C;">PPOL 6818 · Georgetown University</div></div>
-    <div><div style="font-size:0.72rem;color:#4A6A88;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px;">Total simulations</div><div style="font-size:0.9rem;font-weight:500;color:#1A3A5C;">13,000 regressions</div></div>
-    <div><div style="font-size:0.72rem;color:#4A6A88;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px;">Tools</div><div style="font-size:0.9rem;font-weight:500;color:#1A3A5C;">Stata, simulate, postfile</div></div>
-    <div><div style="font-size:0.72rem;color:#4A6A88;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px;">GitHub</div><div style="font-size:0.9rem;font-weight:500;"><a href="https://github.com/gui2de/ppol6818-spring2026/pull/170" target="_blank">View code ↗</a></div></div>
+    <div><div class="proj-label">Course</div><div class="proj-value">PPOL 6818 · Georgetown University</div></div>
+    <div><div class="proj-label">Total simulations</div><div class="proj-value">13,000 regressions</div></div>
+    <div><div class="proj-label">Tools</div><div class="proj-value">Stata, simulate, postfile</div></div>
+    <div><div class="proj-label">GitHub</div><div class="proj-value"><a href="https://github.com/gui2de/ppol6818-spring2026/pull/170" target="_blank">View code ↗</a></div></div>
   </div>
 </div>
 ```
@@ -56,9 +55,9 @@ Designed a DGP where Y ~ N(0,1), treatment effect = **0.1 SD** (uniform 0.0–0.
     <div class="stat-number">~3,142</div>
     <div class="stat-label">Baseline N (80% power, 0.1 SD effect)</div>
   </div>
-  <div class="stat-card" style="background:#D6F5F2;">
-    <div class="stat-number" style="color:#1A8A82;">~3,697</div>
-    <div class="stat-label" style="color:#1A8A82;">After 15% attrition (+18% larger)</div>
+  <div class="stat-card stat-card-teal">
+    <div class="stat-number">~3,697</div>
+    <div class="stat-label">After 15% attrition (+18% larger)</div>
   </div>
   <div class="stat-card">
     <div class="stat-number">~4,190</div>
@@ -87,8 +86,8 @@ Designed a school-based intervention where treatment is assigned at the **school
 **Partial compliance finding:** When only 70% of assigned schools implement the intervention, the required school count rises by **~45%**. Non-compliance is a design problem, not just a fidelity problem.
 
 ```{=html}
-<div style="background:#F7FAFE;border:1px solid #D0DFF0;border-radius:12px;padding:1.2rem 1.5rem;margin-top:2rem;">
-  <div style="font-size:0.78rem;font-weight:600;color:#1A3A5C;margin-bottom:0.5rem;">Skills demonstrated</div>
+<div class="proj-notebox">
+  <div class="proj-notebox-title">Skills demonstrated</div>
   <div class="pills-row">
     <span class="pill pill-blue">Monte Carlo simulation</span>
     <span class="pill pill-blue">Stata simulate command</span>

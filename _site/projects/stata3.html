@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-354f72db825dbc4857cee9c7afac3516.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-a32aa014b510e3ca53d51f0ddc74ba8b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -59,7 +59,20 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=DM+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=DM+Sans:wght@300;400;500;600&amp;family=Baloo+2:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<script>
+  // Apply stored theme immediately, before first paint, to avoid a flash.
+  // Default is always "light" on a first visit — deliberately NOT reading
+  // prefers-color-scheme, since that follows the OS's dark mode setting,
+  // which on many systems is itself scheduled by time of day. A returning
+  // visitor's own manual toggle (saved below) is still respected.
+  (function () {
+    try {
+      var t = localStorage.getItem("anu-theme") || "light";
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -90,16 +103,24 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../work.html"> 
+<span class="menu-text">Work Experience</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../academic.html"> 
+<span class="menu-text">Academic</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../projects/index.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../blog/index.html"> 
-<span class="menu-text">Blog</span></a>
+    <a class="nav-link" href="../travel.html"> 
+<span class="menu-text">Travel</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
-<span class="menu-text">About</span></a>
+    <a class="nav-link" href="../extracurricular.html"> 
+<span class="menu-text">Off the clock</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -136,13 +157,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Sampling Theory, Power Analysis &amp; Cluster RCT Design</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">Causal Inference</div>
-    <div class="quarto-category">Power Analysis</div>
-    <div class="quarto-category">Stata</div>
-    <div class="quarto-category">Monte Carlo</div>
-  </div>
-  </div>
+</div>
 
 <div>
   <div class="description">
@@ -176,12 +191,12 @@ ul.task-list li input[type="checkbox"] {
   <span class="pill pill-slate">Cluster RCT design</span>
 </div>
 
-<div style="background:#DAEEFF;border-radius:12px;padding:1.2rem 1.5rem;margin-bottom:2rem;">
+<div class="proj-infobox">
   <div style="display:flex;gap:2rem;flex-wrap:wrap;">
-    <div><div style="font-size:0.72rem;color:#4A6A88;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px;">Course</div><div style="font-size:0.9rem;font-weight:500;color:#1A3A5C;">PPOL 6818 · Georgetown University</div></div>
-    <div><div style="font-size:0.72rem;color:#4A6A88;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px;">Total simulations</div><div style="font-size:0.9rem;font-weight:500;color:#1A3A5C;">13,000 regressions</div></div>
-    <div><div style="font-size:0.72rem;color:#4A6A88;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px;">Tools</div><div style="font-size:0.9rem;font-weight:500;color:#1A3A5C;">Stata, simulate, postfile</div></div>
-    <div><div style="font-size:0.72rem;color:#4A6A88;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px;">GitHub</div><div style="font-size:0.9rem;font-weight:500;"><a href="https://github.com/gui2de/ppol6818-spring2026/pull/170" target="_blank">View code ↗</a></div></div>
+    <div><div class="proj-label">Course</div><div class="proj-value">PPOL 6818 · Georgetown University</div></div>
+    <div><div class="proj-label">Total simulations</div><div class="proj-value">13,000 regressions</div></div>
+    <div><div class="proj-label">Tools</div><div class="proj-value">Stata, simulate, postfile</div></div>
+    <div><div class="proj-label">GitHub</div><div class="proj-value"><a href="https://github.com/gui2de/ppol6818-spring2026/pull/170" target="_blank">View code ↗</a></div></div>
   </div>
 </div>
 <section id="part-1-sampling-noise-in-a-fixed-population" class="level2">
@@ -244,9 +259,9 @@ ul.task-list li input[type="checkbox"] {
     <div class="stat-number">~3,142</div>
     <div class="stat-label">Baseline N (80% power, 0.1 SD effect)</div>
   </div>
-  <div class="stat-card" style="background:#D6F5F2;">
-    <div class="stat-number" style="color:#1A8A82;">~3,697</div>
-    <div class="stat-label" style="color:#1A8A82;">After 15% attrition (+18% larger)</div>
+  <div class="stat-card stat-card-teal">
+    <div class="stat-number">~3,697</div>
+    <div class="stat-label">After 15% attrition (+18% larger)</div>
   </div>
   <div class="stat-card">
     <div class="stat-number">~4,190</div>
@@ -288,8 +303,8 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 <p><strong>Partial compliance finding:</strong> When only 70% of assigned schools implement the intervention, the required school count rises by <strong>~45%</strong>. Non-compliance is a design problem, not just a fidelity problem.</p>
-<div style="background:#F7FAFE;border:1px solid #D0DFF0;border-radius:12px;padding:1.2rem 1.5rem;margin-top:2rem;">
-  <div style="font-size:0.78rem;font-weight:600;color:#1A3A5C;margin-bottom:0.5rem;">Skills demonstrated</div>
+<div class="proj-notebox">
+  <div class="proj-notebox-title">Skills demonstrated</div>
   <div class="pills-row">
     <span class="pill pill-blue">Monte Carlo simulation</span>
     <span class="pill pill-blue">Stata simulate command</span>
@@ -710,7 +725,7 @@ ul.task-list li input[type="checkbox"] {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2026 Anurita Srivastava</p>
+<p>© 2026 Anurita Srivastava · Made with Dribbble and Claude.ai ❤</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
@@ -739,6 +754,296 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
 </footer>
+<script>
+(function () {
+  "use strict";
+
+  var STORAGE_KEY = "anu-theme";
+
+  function getStoredTheme() {
+    try { return localStorage.getItem(STORAGE_KEY); } catch (e) { return null; }
+  }
+
+  function storeTheme(theme) {
+    try { localStorage.setItem(STORAGE_KEY, theme); } catch (e) {}
+  }
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute("data-theme", theme);
+    var btn = document.getElementById("theme-toggle-btn");
+    if (btn) {
+      btn.textContent = theme === "dark" ? "\u2600\uFE0F" : "\uD83C\uDF19";
+      var label = theme === "dark" ? "Switch to day mode" : "Switch to night mode";
+      btn.setAttribute("aria-label", label);
+      btn.title = label;
+    }
+  }
+
+  var initial = getStoredTheme() || document.documentElement.getAttribute("data-theme") || "light";
+
+  // ── THEME TOGGLE BUTTON ──────────────────────────────────────
+  function injectToggleButton() {
+    if (document.getElementById("theme-toggle-btn")) return;
+    var btn = document.createElement("button");
+    btn.id = "theme-toggle-btn";
+    btn.className = "theme-toggle";
+    btn.type = "button";
+    btn.addEventListener("click", function () {
+      var current = document.documentElement.getAttribute("data-theme");
+      var next = current === "dark" ? "light" : "dark";
+      applyTheme(next);
+      storeTheme(next);
+    });
+    document.body.appendChild(btn);
+    applyTheme(initial);
+  }
+
+  // ── HERO SCROLL — pinned crossfade (breedlove.xyz-style) ─────
+  // hero-section is pinned via CSS position:sticky for one extra
+  // viewport's worth of scroll (see .hero-pin-wrap height). While
+  // pinned, this fades the intro layer out and the detail layer
+  // (bio/CTAs/stats) in, directly over the photo, plus a slow
+  // background zoom. Once progress hits 1 the section unpins and
+  // the rest of the page scrolls normally.
+  function initScrollZoom() {
+    var heroBg = document.getElementById("hero-bg-zoom");
+    var intro  = document.getElementById("hero-layer-intro");
+    var detail = document.getElementById("hero-layer-detail");
+    if (!heroBg) return;
+
+    var ticking = false;
+
+    function update() {
+      var scrollY  = window.scrollY || window.pageYOffset;
+      var viewportH = window.innerHeight || 1;
+      // progress 0 → 1 across the one extra viewport of scroll room
+      var progress = Math.min(Math.max(scrollY / viewportH, 0), 1);
+
+      var bgScale = 1 + progress * 0.18;
+      heroBg.style.transform = "scale(" + bgScale.toFixed(3) + ")";
+      heroBg.style.transformOrigin = "center center";
+
+      if (intro) {
+        var introOpacity = Math.max(1 - progress * 1.4, 0);
+        intro.style.opacity   = introOpacity.toFixed(3);
+        intro.style.transform = "translateY(" + (-(progress * 24)).toFixed(1) + "px)";
+        intro.style.pointerEvents = introOpacity < 0.05 ? "none" : "auto";
+      }
+
+      if (detail) {
+        detail.style.opacity   = progress.toFixed(3);
+        detail.style.transform = "translateY(" + ((1 - progress) * 16).toFixed(1) + "px)";
+        detail.style.pointerEvents = progress > 0.4 ? "auto" : "none";
+      }
+
+      ticking = false;
+    }
+
+    window.addEventListener("scroll", function () {
+      if (!ticking) { requestAnimationFrame(update); ticking = true; }
+    }, { passive: true });
+    window.addEventListener("resize", function () {
+      if (!ticking) { requestAnimationFrame(update); ticking = true; }
+    }, { passive: true });
+
+    heroBg.style.willChange = "transform";
+    update();
+  }
+
+  // ── GALAXY CONSTELLATION TOOLTIPS ────────────────────────────
+  function initGalaxyTooltips() {
+    var svg = document.querySelector(".constellation-svg");
+    if (!svg) return;
+    var tooltip = document.getElementById("galaxy-tooltip");
+    if (!tooltip) return;
+
+    var stars = svg.querySelectorAll(".star-dot");
+    stars.forEach(function (star) {
+      star.style.cursor = "pointer";
+
+      star.addEventListener("mouseenter", function (e) {
+        var stat = star.getAttribute("data-stat");
+        var ctx  = star.getAttribute("data-ctx");
+        if (!stat) return;
+
+        tooltip.innerHTML =
+          "<strong class='gtip-stat'>" + stat + "</strong>" +
+          "<span class='gtip-ctx'>" + ctx + "</span>";
+
+        // Center the tooltip in the galaxy wrapper
+        var wrap = svg.closest(".galaxy-impact");
+        var wW = wrap.offsetWidth;
+        var wH = wrap.offsetHeight;
+        var tipW = 220;
+        var tipH = 80;
+        var left = (wW - tipW) / 2;
+        var top  = (wH - tipH) / 2;
+
+        tooltip.style.left    = left + "px";
+        tooltip.style.top     = top  + "px";
+        tooltip.style.width   = tipW + "px";
+        tooltip.style.opacity = "1";
+        tooltip.style.transform = "translateY(0) scale(1)";
+
+        // Glow the hovered star
+        star.setAttribute("r", parseFloat(star.getAttribute("r")) * 1.55 + "");
+      });
+
+      star.addEventListener("mouseleave", function () {
+        tooltip.style.opacity = "0";
+        tooltip.style.transform = "translateY(4px)";
+        // Reset radius (stored in data attribute)
+        var origR = star.getAttribute("data-orig-r");
+        if (origR) { star.setAttribute("r", origR); }
+      });
+
+      // Store original radius once
+      star.setAttribute("data-orig-r", star.getAttribute("r"));
+    });
+  }
+
+  // ── CUSTOM CAT CURSOR (cat face only — no paw swap) ──────────
+  function initCatCursor() {
+    var isTouch = window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
+    if (isTouch) return;
+
+    document.documentElement.classList.add("has-custom-cursor");
+
+    var cursorEl = document.createElement("div");
+    cursorEl.id = "cat-cursor";
+
+    // ── CAT FACE ─────────────────────────────────────
+    // Nose uses --cursor-nose which is blue in BOTH modes so it
+    // never camouflages against the body colour. This is the
+    // only cursor state — it never swaps to a paw on hover,
+    // it just scales up slightly (see .is-hover in custom.scss).
+    var faceSVG =
+      '<g id="cat-face">' +
+        // Body
+        '<ellipse cx="50" cy="60" rx="32" ry="26" fill="var(--cursor-fill)"/>' +
+        // Outer ears
+        '<path d="M 22 38 L 12 12 L 38 30 Z" fill="var(--cursor-fill)"/>' +
+        '<path d="M 78 38 L 88 12 L 62 30 Z" fill="var(--cursor-fill)"/>' +
+        // Inner ear colour
+        '<path d="M 26 36 L 20 18 L 36 28 Z" fill="var(--cursor-accent)"/>' +
+        '<path d="M 74 36 L 80 18 L 64 28 Z" fill="var(--cursor-accent)"/>' +
+        // Eye whites
+        '<ellipse cx="38" cy="56" rx="5.5" ry="7" fill="var(--cursor-eye-white)"/>' +
+        '<ellipse cx="62" cy="56" rx="5.5" ry="7" fill="var(--cursor-eye-white)"/>' +
+        // Pupils
+        '<ellipse cx="38" cy="58" rx="2.8" ry="4" fill="var(--cursor-pupil)"/>' +
+        '<ellipse cx="62" cy="58" rx="2.8" ry="4" fill="var(--cursor-pupil)"/>' +
+        // BLUE NOSE — always visible in day and night mode
+        '<ellipse cx="50" cy="68" rx="3.8" ry="2.8" fill="var(--cursor-nose)"/>' +
+        // Mouth lines
+        '<path d="M 50 71 Q 44 75 40 73" stroke="var(--cursor-nose)" stroke-width="1" fill="none" opacity="0.6"/>' +
+        '<path d="M 50 71 Q 56 75 60 73" stroke="var(--cursor-nose)" stroke-width="1" fill="none" opacity="0.6"/>' +
+      '</g>';
+
+    cursorEl.innerHTML =
+      '<svg viewBox="0 0 100 100" id="cat-cursor-svg">' +
+        faceSVG +
+      '</svg>';
+
+    document.body.appendChild(cursorEl);
+
+    // Restore the last known pointer position from the previous
+    // page (this is a multi-page site, so every navigation is a
+    // full reload and JS state — including mouseX/mouseY — is
+    // lost). Without this, the cursor always re-initializes at
+    // the viewport center and only catches up to the real pointer
+    // once the user moves the mouse, which looks like the cat
+    // cursor "disappearing" after every click to a new section.
+    var CURSOR_POS_KEY = "anu-cursor-pos";
+    var startX = window.innerWidth / 2, startY = window.innerHeight / 2;
+    try {
+      var saved = JSON.parse(sessionStorage.getItem(CURSOR_POS_KEY));
+      if (saved && typeof saved.x === "number" && typeof saved.y === "number") {
+        startX = saved.x;
+        startY = saved.y;
+      }
+    } catch (e) {}
+
+    var mouseX = startX, mouseY = startY;
+    var curX   = mouseX, curY = mouseY;
+
+    document.addEventListener("mousemove", function (e) {
+      mouseX = e.clientX; mouseY = e.clientY;
+      try { sessionStorage.setItem(CURSOR_POS_KEY, JSON.stringify({ x: mouseX, y: mouseY })); } catch (err) {}
+    }, { passive: true });
+
+    var hoverSelector =
+      "a, button, .nav-tile, .acad-card, .game-card, " +
+      ".portfolio-card, .fb, .star-dot, .impact-filter-tab, " +
+      ".volunteer-card, [onclick], " +
+      "input, select, textarea, .theme-toggle";
+
+    document.addEventListener("mouseover", function (e) {
+      if (e.target.closest && e.target.closest(hoverSelector)) {
+        cursorEl.classList.add("is-hover");
+      }
+    });
+
+    document.addEventListener("mouseout", function (e) {
+      if (e.target.closest && e.target.closest(hoverSelector)) {
+        cursorEl.classList.remove("is-hover");
+      }
+    });
+
+    function animateCursor() {
+      curX += (mouseX - curX) * 0.25;
+      curY += (mouseY - curY) * 0.25;
+      cursorEl.style.left = curX + "px";
+      cursorEl.style.top  = curY + "px";
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+  }
+
+  // ── GALAXY IMPACT FILTER TABS ─────────────────────────────────
+  // Clicking a category tab dims every cluster except the one
+  // selected, similar to the tabbed "Impact" stat board pattern.
+  function initGalaxyFilters() {
+    var tabs = document.querySelectorAll(".impact-filter-tab");
+    if (!tabs.length) return;
+    var svg = document.querySelector(".constellation-svg");
+    if (!svg) return;
+
+    tabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        tabs.forEach(function (t) { t.classList.remove("on"); });
+        tab.classList.add("on");
+        var cluster = tab.getAttribute("data-cluster");
+
+        svg.querySelectorAll("[data-cluster]").forEach(function (group) {
+          if (cluster === "all" || group.getAttribute("data-cluster") === cluster) {
+            group.style.opacity = "1";
+            group.style.pointerEvents = "";
+          } else {
+            group.style.opacity = "0.12";
+            group.style.pointerEvents = "none";
+          }
+        });
+      });
+    });
+  }
+
+  // ── BOOT ────────────────────────────────────────────────────
+  function init() {
+    injectToggleButton();
+    initScrollZoom();
+    initGalaxyTooltips();
+    initGalaxyFilters();
+    initCatCursor();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();
+</script>
 
 
 
