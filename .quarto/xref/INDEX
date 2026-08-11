@@ -22,5 +22,23 @@
   },
   "about.qmd": {
     "about.html": "13021bab"
+  },
+  "extracurricular.qmd": {
+    "extracurricular.html": "b32c41cb"
+  },
+  "projects/writing-samples.qmd": {
+    "writing-samples.html": "94b11213"
+  },
+  "projects/philanthropy-tool.qmd": {
+    "philanthropy-tool.html": "533e3d9a"
+  },
+  "work.qmd": {
+    "work.html": "e77cb805"
+  },
+  "travel.qmd": {
+    "travel.html": "ef695ee7"
+  },
+  "academic.qmd": {
+    "academic.html": "398dda2d"
   }
 }

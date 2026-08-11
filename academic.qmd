@@ -44,7 +44,7 @@ toc: false
     <div class="acad-grid">
       <div class="acad-card sel">
         <div class="acad-icon">🎓</div>
-        <div class="acad-deg">M.S. Public Policy (PPOL)</div>
+        <div class="acad-deg">MPP Public Policy</div>
         <div class="acad-inst">Georgetown University · McCourt School</div>
         <div class="acad-yr">2024 – 2026</div>
       </div>
@@ -57,7 +57,7 @@ toc: false
       <div class="acad-card">
         <div class="acad-icon">🏫</div>
         <div class="acad-deg">High School (PCM + CS)</div>
-        <div class="acad-inst">Delhi Public School, Vasant Kunj</div>
+        <div class="acad-inst">Convent of Jesus and Mary, St. Anthony's Junior College, Agra</div>
         <div class="acad-yr">2013 – 2015</div>
       </div>
     </div>
