@@ -41,6 +41,11 @@ toc: false
         onerror="this.parentElement.classList.add('ph-fallback'); this.remove();">
     </div>
     <div class="travel-photo">
+      <img src="assets/travel/travel-13.jpg" alt="Standing beneath a large geometric wooden installation"
+        loading="lazy" width="1050" height="1400"
+        onerror="this.parentElement.classList.add('ph-fallback'); this.remove();">
+    </div>
+    <div class="travel-photo">
       <img src="assets/travel/travel-3.jpg" alt="Travel photo"
         onerror="this.parentElement.classList.add('ph-fallback'); this.remove();">
     </div>
