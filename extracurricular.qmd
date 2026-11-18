@@ -175,16 +175,15 @@ toc: false
           <img class="oc-photo" src="assets/extracurricular/arts-crafts.jpg" alt="Watercolor and pencil sketch">
           <div class="oc-photo-body">
             <div class="oc-title">Arts &amp; crafts</div>
-            <div class="oc-meta">Watercolor &amp; pencil</div>
-            <div class="oc-desc">A quiet evening hobby — sketching first, then watercolor to fill it in.</div>
+            <div class="oc-desc">A quiet evening hobby: sketching, pottery, or painting.</div>
           </div>
         </div>
         <div class="offclock-card has-photo">
           <img class="oc-photo" src="assets/extracurricular/gta-eminem.jpg" alt="GTA Online, Dr. Dre Contract update, Eminem-themed apartment">
           <div class="oc-photo-body">
             <div class="oc-title">Gaming</div>
-            <div class="oc-meta">GTA Online · The Contract</div>
-            <div class="oc-desc">Repping the "Shady" tee in an Eminem-poster-lined safehouse — red DualSense in hand.</div>
+            <div class="oc-meta" style="color:#595959;">I have two controllers so friends can play</div>
+            <div class="oc-desc" style="color:#000;">story-based or critical thinking online games</div>
           </div>
         </div>
       </div>

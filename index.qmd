@@ -45,7 +45,7 @@ toc: false
           <p class="eyebrow">Program Manager · Policy Researcher · Strategy</p>
           <h1>Anurita Srivastava</h1>
           <p class="hero-bio">
-            I work at the intersection of policy research, program management, communications, and operations. My experience spans launching digital products, leading cross-functional programs, and building partnerships. I use research to guide decisions and communicate findings clearly so teams can act on them.
+            I work at the intersection of policy research, program management, communications, and operations. My experience spans launching digital products, leading cross-functional programs, and building partnerships. I use empirical research to guide decisions and communicate findings clearly so teams can act on them.
           </p>
           <div class="hero-ctas">
             <a href="https://linkedin.com/in/anurita-srivastava" class="btn-outline-custom">LinkedIn ↗</a>
@@ -440,5 +440,6 @@ toc: false
   <span class="affil-chip">Atlassian Corporation</span>
   <span class="affil-chip">Apple</span>
   <span class="affil-chip">Zomato</span>
+  <span class="affil-chip">Promom</span>
 </div>
 ```

@@ -27,7 +27,7 @@ website:
         href: extracurricular.qmd
     right:
       - text: "Email me ↗"
-        href: mailto:srivastava.anurita@gmail.com
+        href: mailto:anurita.pm@gmail.com
         aria-label: "Contact"
 
   page-footer:
@@ -40,7 +40,7 @@ website:
       - icon: linkedin
         href: https://www.linkedin.com/in/anurita-srivastava/
       - icon: envelope
-        href: mailto:srivastava.anurita@gmail.com
+        href: mailto:anurita.pm@gmail.com
 
   open-graph:
     title: "Anurita Srivastava — Program Manager"

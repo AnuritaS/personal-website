@@ -1096,36 +1096,27 @@ html[data-theme="dark"] {
   &::after { content: "Add a photo here"; }
 }
 
-// Masonry-style gallery — CSS multi-column layout lets each photo
-// keep its own natural aspect ratio (no forced crop/object-fit), so
-// tiles size themselves to whatever dimensions the uploaded photos
-// actually are, instead of a uniform cropped grid.
 .travel-gallery {
-  column-count: 3;
-  column-gap: 0.7rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
 }
 
 .travel-photo {
+  aspect-ratio: 4 / 5;
   border-radius: 14px;
   overflow: hidden;
   background: $slate-100;
   border: 1px solid $slate-200;
-  margin-bottom: 0.7rem;
-  break-inside: avoid;
-
-  img { width: 100%; height: auto; display: block; }
-
-  // Placeholder tiles (no photo uploaded yet) have no intrinsic image
-  // size to size themselves by, so they get a sensible fixed height.
-  &.ph-fallback { min-height: 170px; }
+  img { width: 100%; height: 100%; object-fit: cover; display: block; }
 }
 
 @media (max-width: 700px) {
-  .travel-gallery { column-count: 2; }
+  .travel-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 460px) {
-  .travel-gallery { column-count: 1; }
+  .travel-gallery { grid-template-columns: minmax(0, 1fr); }
 }
 
 html[data-theme="dark"] .travel-photo { background: var(--bg-accent); border-color: var(--border); }

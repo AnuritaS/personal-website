@@ -10,7 +10,7 @@ toc: false
     <p class="eyebrow">Work Experience</p>
     <h1 style="font-size:2rem;margin-bottom:0.3rem;">Anurita Srivastava</h1>
     <p style="color:#4A6A88;font-size:0.95rem;max-width:520px;line-height:1.6;">
-      Eight years of experience across product engineering, project management, strategy, and policy research.
+      Eight years of experience across product engineering, project management, nonprofits, and policy research.
     </p>
   </div>
 </div>
@@ -163,12 +163,4 @@ toc: false
   </div>
 </div>
 
-<div class="content-section-impact">
-  <section class="work-link-card">
-    <div class="wlc-bar" style="background:#6FB0E8;"></div>
-    <div class="wlc-body">
-      <h2 class="wlc-title" style="margin-bottom:0;">Promom</h2>
-    </div>
-  </section>
-</div>
 ```

@@ -33,9 +33,6 @@ toc: false
     <div class="content-section-impact" style="padding-top:0;padding-bottom:0;">
       <p class="eyebrow">Academic</p>
       <h1 style="font-size:2rem;margin-bottom:0.3rem;">Education &amp; Training</h1>
-      <p class="acad-hero-desc" style="font-size:0.95rem;max-width:520px;line-height:1.6;">
-        Quantitative methods, causal inference, and evidence-based policy — the methodological backbone behind the work.
-      </p>
     </div>
   </div>
 
@@ -99,7 +96,7 @@ toc: false
         null effect.
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin:0.9rem 0 1rem;">
-        <span class="pill pill-blue">Causal inference</span>
+        <span class="pill pill-blue">Industrial and Animal Welfare Policy</span>
         <span class="pill pill-teal">Synthetic control</span>
         <span class="pill pill-sky">Stata</span>
         <span class="pill pill-blue">Gender &amp; development</span>
