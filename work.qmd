@@ -59,9 +59,9 @@ toc: false
 
 <!-- Highlights & Links -->
 <div class="content-section-impact">
-  <div class="section-divider">Project Spotlights</div>
+  <div class="section-divider">Project Highlights</div>
   <p style="font-size:0.85rem;color:#4A6A88;margin-bottom:1.2rem;">
-    Full work experience detail is in my <a href="https://linkedin.com/in/anurita-srivastava" class="card-link">resume ↗</a>. Below are a few public highlights from across my career.
+    My full work experience is on <a href="https://linkedin.com/in/anurita-srivastava" class="card-link">LinkedIn ↗</a>.
   </p>
 
   <div class="work-highlight-grid">
@@ -151,7 +151,8 @@ toc: false
     <span class="pill pill-sky">Impact investment · CSR</span>
     <span class="pill pill-teal">People & program management</span>
     <span class="pill pill-blue">Power analysis &amp; RCT design</span>
-    <span class="pill pill-sky">AI governance and content safety research</span>
+    <span class="pill pill-sky">AI Governance Research</span>
+    <span class="pill pill-teal">Trust and Content Safety</span>
     <span class="pill pill-teal">Economic and geospatial analysis</span>
     <span class="pill pill-blue">Event management</span>
     <span class="pill pill-sky">Stata · R · Python</span>
@@ -160,6 +161,9 @@ toc: false
     <span class="pill pill-sky">Product-forward technology policy</span>
     <span class="pill pill-teal">Theory of change</span>
     <span class="pill pill-blue">Mixed methods analysis</span>
+    <span class="pill pill-sky">Process Improvement</span>
+    <span class="pill pill-teal">Executive Communications</span>
+    <span class="pill pill-blue">KPI Dashboards</span>
   </div>
 </div>
 

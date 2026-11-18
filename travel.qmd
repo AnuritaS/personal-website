@@ -32,6 +32,7 @@ toc: false
 
   <div class="section-divider">Snapshots</div>
   <div class="travel-gallery">
+  <div class="travel-gallery-row travel-gallery-top">
     <div class="travel-photo">
       <img src="assets/travel/travel-1.jpg" alt="Travel photo"
         onerror="this.parentElement.classList.add('ph-fallback'); this.remove();">
@@ -49,6 +50,8 @@ toc: false
       <img src="assets/travel/travel-3.jpg" alt="Travel photo"
         onerror="this.parentElement.classList.add('ph-fallback'); this.remove();">
     </div>
+  </div>
+  <div class="travel-gallery-row travel-gallery-middle">
     <div class="travel-photo">
       <img src="assets/travel/travel-4.jpg" alt="Travel photo"
         onerror="this.parentElement.classList.add('ph-fallback'); this.remove();">
@@ -69,6 +72,8 @@ toc: false
       <img src="assets/travel/travel-8.jpg" alt="Travel photo"
         onerror="this.parentElement.classList.add('ph-fallback'); this.remove();">
     </div>
+  </div>
+  <div class="travel-gallery-row travel-gallery-bottom">
     <div class="travel-photo">
       <img src="assets/travel/travel-9.jpg" alt="Travel photo"
         onerror="this.parentElement.classList.add('ph-fallback'); this.remove();">
@@ -85,6 +90,7 @@ toc: false
       <img src="assets/travel/travel-12.jpg" alt="Travel photo"
         onerror="this.parentElement.classList.add('ph-fallback'); this.remove();">
     </div>
+  </div>
   </div>
 
 </div>

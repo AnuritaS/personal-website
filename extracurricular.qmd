@@ -175,6 +175,7 @@ toc: false
           <img class="oc-photo" src="assets/extracurricular/arts-crafts.jpg" alt="Watercolor and pencil sketch">
           <div class="oc-photo-body">
             <div class="oc-title">Arts &amp; crafts</div>
+            <div class="oc-meta">I like cardio, but also calming activities.</div>
             <div class="oc-desc">A quiet evening hobby: sketching, pottery, or painting.</div>
           </div>
         </div>
@@ -183,7 +184,7 @@ toc: false
           <div class="oc-photo-body">
             <div class="oc-title">Gaming</div>
             <div class="oc-meta" style="color:#595959;">I have two controllers so friends can play</div>
-            <div class="oc-desc" style="color:#000;">story-based or critical thinking online games</div>
+            <div class="oc-desc" style="color:#000;">Story-based or critical thinking online games</div>
           </div>
         </div>
       </div>
