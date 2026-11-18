@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2026-05-15">
-<meta name="description" content="An interactive foundation-strategy dashboard — sector allocation, geographic focus, grant concentration, OECD DAC impact scoring, and an equity lens — built on a transparent, reproducible simulated dataset.">
+<meta name="description" content="Two grantmaking dashboards: the original Tides and Kresge case study and a follow-up tool that analyzes grant portfolios uploaded as CSV files.">
 
 <title>Philanthropy Effectiveness Evaluation Tool – Anu</title>
 <style>
@@ -144,10 +144,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#where-it-started" id="toc-where-it-started" class="nav-link active" data-scroll-target="#where-it-started">Where it started</a></li>
+  <li><a href="#part-1-original-philanthropy-effectiveness-tool" id="toc-part-1-original-philanthropy-effectiveness-tool" class="nav-link active" data-scroll-target="#part-1-original-philanthropy-effectiveness-tool">Part 1 — Original Philanthropy Effectiveness Tool</a>
+  <ul class="collapse">
+  <li><a href="#where-it-started" id="toc-where-it-started" class="nav-link" data-scroll-target="#where-it-started">Where it started</a></li>
   <li><a href="#what-the-dashboard-does" id="toc-what-the-dashboard-does" class="nav-link" data-scroll-target="#what-the-dashboard-does">What the dashboard does</a></li>
   <li><a href="#on-the-data" id="toc-on-the-data" class="nav-link" data-scroll-target="#on-the-data">On the data</a></li>
   <li><a href="#why-this-why-now" id="toc-why-this-why-now" class="nav-link" data-scroll-target="#why-this-why-now">Why this, why now</a></li>
+  </ul></li>
+  <li><a href="#part-2-philanthropy-ai-tool" id="toc-part-2-philanthropy-ai-tool" class="nav-link" data-scroll-target="#part-2-philanthropy-ai-tool">Part 2 — Philanthropy AI Tool</a></li>
   </ul>
 </nav>
     </div>
@@ -161,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    An interactive foundation-strategy dashboard — sector allocation, geographic focus, grant concentration, OECD DAC impact scoring, and an equity lens — built on a transparent, reproducible simulated dataset.
+    Two grantmaking dashboards: the original Tides and Kresge case study and a follow-up tool that analyzes grant portfolios uploaded as CSV files.
   </div>
 </div>
 
@@ -190,7 +194,8 @@ ul.task-list li input[type="checkbox"] {
   <span class="pill pill-teal">Data visualization</span>
   <span class="pill pill-slate">Stata · simulation</span>
 </div>
-
+<section id="part-1-original-philanthropy-effectiveness-tool" class="level2">
+<h2 class="anchored" data-anchor-id="part-1-original-philanthropy-effectiveness-tool">Part 1 — Original Philanthropy Effectiveness Tool</h2>
 <div class="proj-infobox">
   <div style="display:flex;gap:2rem;flex-wrap:wrap;">
     <div><div class="proj-label">Course origin</div><div class="proj-value">Philanthropy class, Georgetown McCourt</div></div>
@@ -199,14 +204,14 @@ ul.task-list li input[type="checkbox"] {
     <div><div class="proj-label">GitHub</div><div class="proj-value"><a href="https://github.com/AnuritaS/philanthropy-tool" target="_blank">View code ↗</a></div></div>
   </div>
 </div>
-<section id="where-it-started" class="level2">
-<h2 class="anchored" data-anchor-id="where-it-started">Where it started</h2>
+<section id="where-it-started" class="level3">
+<h3 class="anchored" data-anchor-id="where-it-started">Where it started</h3>
 <p>Earlier this semester, I completed a comparative case study of Tides and The Kresge Foundation for my philanthropy class — analyzing how two of the most influential social- and environmental-justice funders in the U.S. deploy capital differently, and why it matters.</p>
 <p>That research raised an obvious next question: what if this analysis could be interactive? What if a program officer, a researcher, or a curious student could explore the underlying data themselves, instead of reading it secondhand in a paper?</p>
 <p>So I built it.</p>
 </section>
-<section id="what-the-dashboard-does" class="level2">
-<h2 class="anchored" data-anchor-id="what-the-dashboard-does">What the dashboard does</h2>
+<section id="what-the-dashboard-does" class="level3">
+<h3 class="anchored" data-anchor-id="what-the-dashboard-does">What the dashboard does</h3>
 <p>A full foundation-strategy dashboard, designed and coded in a day, combining the grant research from the case study with data visualization:</p>
 <ul>
 <li>Analyzes sector allocation across NTEE codes (Candid’s nonprofit classification system)</li>
@@ -217,16 +222,26 @@ ul.task-list li input[type="checkbox"] {
 <li>Surfaces actionable recommendations for each foundation based on the above</li>
 </ul>
 </section>
-<section id="on-the-data" class="level2">
-<h2 class="anchored" data-anchor-id="on-the-data">On the data</h2>
+<section id="on-the-data" class="level3">
+<h3 class="anchored" data-anchor-id="on-the-data">On the data</h3>
 <p>The dashboard runs on 1,200 simulated grants. The real underlying data lives in the academic case study itself; this build exists to show what a tool like this looks like in practice, not to republish the original research dataset. A companion Stata file documents exactly how the simulated dataset was constructed, so the methodology behind every chart is transparent and reproducible from scratch.</p>
 </section>
-<section id="why-this-why-now" class="level2">
-<h2 class="anchored" data-anchor-id="why-this-why-now">Why this, why now</h2>
+<section id="why-this-why-now" class="level3">
+<h3 class="anchored" data-anchor-id="why-this-why-now">Why this, why now</h3>
 <p>This sits exactly at the intersection I want to keep working in: policy research, program design, and the philanthropic sector — building tools that make evaluation legible to the people who actually have to act on it.</p>
 <p>If you work in foundation strategy or impact evaluation, I’d welcome a conversation — including feedback on how to improve the dashboard.</p>
 <div style="margin-top:1.5rem;">
-<p><a href="https://github.com/AnuritaS/philanthropy-tool" target="_blank" rel="noopener" class="card-link">View the repository →</a></p>
+<p><a href="https://github.com/AnuritaS/philanthropy-tool" target="_blank" rel="noopener" class="card-link">View the original repository →</a></p>
+</div>
+</section>
+</section>
+<section id="part-2-philanthropy-ai-tool" class="level2">
+<h2 class="anchored" data-anchor-id="part-2-philanthropy-ai-tool">Part 2 — Philanthropy AI Tool</h2>
+<p>I expanded the dashboard so it can analyze grant portfolios from any funder. Start with the simulated dataset or upload a CSV of your own grants. The tool suggests how to map your column names, lets you review and correct the mapping, and validates the data before loading it.</p>
+<p>Compare funders by sector allocation, geographic focus, grant size, and grant type. When the data includes outcome or equity fields, the dashboard also shows patterns in reported impact and the share of grants going to BIPOC-led organizations.</p>
+<div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem;">
+  <a href="https://anuritas.github.io/philanthropy-ai-tool/" target="_blank" rel="noopener" class="card-link">Open the dashboard ↗</a>
+  <a href="https://github.com/AnuritaS/philanthropy-ai-tool" target="_blank" rel="noopener" class="card-link">View the source code ↗</a>
 </div>
 
 

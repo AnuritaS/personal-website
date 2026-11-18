@@ -1,6 +1,6 @@
 ---
 title: "Philanthropy Effectiveness Evaluation Tool"
-description: "An interactive foundation-strategy dashboard — sector allocation, geographic focus, grant concentration, OECD DAC impact scoring, and an equity lens — built on a transparent, reproducible simulated dataset."
+description: "Two grantmaking dashboards: the original Tides and Kresge case study and a follow-up tool that analyzes grant portfolios uploaded as CSV files."
 date: 2026-05-15
 image: "../assets/project-philanthropy-thumb.png"
 toc: true
@@ -13,7 +13,11 @@ toc: true
   <span class="pill pill-teal">Data visualization</span>
   <span class="pill pill-slate">Stata · simulation</span>
 </div>
+```
 
+## Part 1 — Original Philanthropy Effectiveness Tool
+
+```{=html}
 <div class="proj-infobox">
   <div style="display:flex;gap:2rem;flex-wrap:wrap;">
     <div><div class="proj-label">Course origin</div><div class="proj-value">Philanthropy class, Georgetown McCourt</div></div>
@@ -24,7 +28,7 @@ toc: true
 </div>
 ```
 
-## Where it started
+### Where it started
 
 Earlier this semester, I completed a comparative case study of Tides and The Kresge Foundation for my philanthropy class — analyzing how two of the most influential social- and environmental-justice funders in the U.S. deploy capital differently, and why it matters.
 
@@ -32,7 +36,7 @@ That research raised an obvious next question: what if this analysis could be in
 
 So I built it.
 
-## What the dashboard does
+### What the dashboard does
 
 A full foundation-strategy dashboard, designed and coded in a day, combining the grant research from the case study with data visualization:
 
@@ -43,16 +47,29 @@ A full foundation-strategy dashboard, designed and coded in a day, combining the
 - Tracks an equity lens — BIPOC-led organization prioritization — and its correlation with measurable outcomes
 - Surfaces actionable recommendations for each foundation based on the above
 
-## On the data
+### On the data
 
 The dashboard runs on 1,200 simulated grants. The real underlying data lives in the academic case study itself; this build exists to show what a tool like this looks like in practice, not to republish the original research dataset. A companion Stata file documents exactly how the simulated dataset was constructed, so the methodology behind every chart is transparent and reproducible from scratch.
 
-## Why this, why now
+### Why this, why now
 
 This sits exactly at the intersection I want to keep working in: policy research, program design, and the philanthropic sector — building tools that make evaluation legible to the people who actually have to act on it.
 
 If you work in foundation strategy or impact evaluation, I'd welcome a conversation — including feedback on how to improve the dashboard.
 
 <div style="margin-top:1.5rem;">
-  <a href="https://github.com/AnuritaS/philanthropy-tool" target="_blank" rel="noopener" class="card-link">View the repository →</a>
+  <a href="https://github.com/AnuritaS/philanthropy-tool" target="_blank" rel="noopener" class="card-link">View the original repository →</a>
 </div>
+
+## Part 2 — Philanthropy AI Tool
+
+I expanded the dashboard so it can analyze grant portfolios from any funder. Start with the simulated dataset or upload a CSV of your own grants. The tool suggests how to map your column names, lets you review and correct the mapping, and validates the data before loading it.
+
+Compare funders by sector allocation, geographic focus, grant size, and grant type. When the data includes outcome or equity fields, the dashboard also shows patterns in reported impact and the share of grants going to BIPOC-led organizations.
+
+```{=html}
+<div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem;">
+  <a href="https://anuritas.github.io/philanthropy-ai-tool/" target="_blank" rel="noopener" class="card-link">Open the dashboard ↗</a>
+  <a href="https://github.com/AnuritaS/philanthropy-ai-tool" target="_blank" rel="noopener" class="card-link">View the source code ↗</a>
+</div>
+```

@@ -144,7 +144,7 @@ toc: false
       </div>
       <div class="cert-card">
         <div class="cert-icon">💡</div>
-        <div class="cert-name">Design Thinking</div>
+        <div class="cert-name">Responsible AI</div>
       </div>
       <div class="cert-card">
         <div class="cert-icon">🤖</div>

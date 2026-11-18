@@ -10,7 +10,7 @@ toc: false
     <p class="eyebrow">Work Experience</p>
     <h1 style="font-size:2rem;margin-bottom:0.3rem;">Anurita Srivastava</h1>
     <p style="color:#4A6A88;font-size:0.95rem;max-width:520px;line-height:1.6;">
-      Seven years across product engineering, program management, and policy strategy — translating evidence into programs that actually work.
+      Eight years of experience across product engineering, project management, strategy, and policy research.
     </p>
   </div>
 </div>
@@ -21,8 +21,8 @@ toc: false
     <div class="section-divider">By the numbers</div>
     <div class="grid-4" style="gap:0.75rem;margin-top:0.5rem;">
       <div class="stat-card">
-        <div class="stat-number">7+</div>
-        <div class="stat-label">Years of experience</div>
+        <div class="stat-number">20+</div>
+        <div class="stat-label">Brand partnerships and events delivered</div>
       </div>
       <div class="stat-card">
         <div class="stat-number">$1M+</div>
@@ -49,8 +49,8 @@ toc: false
         <div class="stat-label">Revenue growth via financial modeling</div>
       </div>
       <div class="stat-card" style="background:#D6F5F2;">
-        <div class="stat-number" style="color:#1A8A82;">1</div>
-        <div class="stat-label" style="color:#1A8A82;">AI patent filed</div>
+        <div class="stat-number" style="color:#1A8A82;">Up to $5K</div>
+        <div class="stat-label" style="color:#1A8A82;">Grant management</div>
       </div>
     </div>
   </div>
@@ -136,9 +136,8 @@ toc: false
     <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.5rem;">
       <span class="pill pill-blue">English — native</span>
       <span class="pill pill-teal">Hindi — native</span>
-      <span class="pill pill-sky">Spanish — conversational</span>
-      <span class="pill pill-blue">French — beginner</span>
-      <span class="pill pill-teal">German — beginner</span>
+      <span class="pill pill-sky">Bengali</span>
+      <span class="pill pill-blue">French — conversational</span>
     </div>
   </div>
 </div>
@@ -147,17 +146,17 @@ toc: false
 <div class="content-section-impact">
   <div class="section-divider">Areas of expertise</div>
   <div class="pills-row">
-    <span class="pill pill-blue">Trust based philanthropy</span>
+    <span class="pill pill-blue">Workflow Automation</span>
     <span class="pill pill-sky">Impact investment · CSR</span>
     <span class="pill pill-teal">People & program management</span>
     <span class="pill pill-blue">Power analysis &amp; RCT design</span>
-    <span class="pill pill-sky">Health & gender equity</span>
+    <span class="pill pill-sky">AI governance and content safety research</span>
     <span class="pill pill-teal">Economic and geospatial analysis</span>
     <span class="pill pill-blue">Event management</span>
     <span class="pill pill-sky">Stata · R · Python</span>
     <span class="pill pill-teal">Stakeholder engagement</span>
     <span class="pill pill-blue">Advocacy communication</span>
-    <span class="pill pill-sky">Biodiversity finance</span>
+    <span class="pill pill-sky">Product-forward technology policy</span>
   </div>
 </div>
 ```

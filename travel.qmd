@@ -20,7 +20,7 @@ toc: false
   <div class="travel-hero">
     <div>
       <p style="font-size:0.95rem;color:#2C4A66;line-height:1.85;">
-        My travels have taught me to never judge a book by its cover, to take risks, and to stay curious. From the policy hubs of Washington D.C. to community health clinics in East Africa and the streets of Berlin, every place has sharpened how I think about evidence, equity, and change.
+        My travels have taught me to never judge a book by its cover, to take risks, and to stay curious. From the policy hubs of Washington D.C. to community health clinics in South Asia and the streets of Berlin, every place has sharpened how I think about evidence, equity, and change.
       </p>
     </div>
 

@@ -150,47 +150,6 @@ toc: false
     </div>
 
     <!-- ═══════════════════════════════════════════════
-         GAMING
-    ═══════════════════════════════════════════════ -->
-    <div class="offclock-panel gaming-panel">
-      <h3>Gaming &amp; all-time favourites</h3>
-      <div class="offclock-grid">
-        <div class="offclock-card has-photo">
-          <img class="oc-photo" src="assets/extracurricular/gta-eminem.jpg" alt="GTA Online, Dr. Dre Contract update, Eminem-themed apartment">
-          <div class="oc-photo-body">
-            <div class="oc-title">GTA Online</div>
-            <div class="oc-meta">The Contract · Dr. Dre &amp; Eminem update</div>
-            <div class="oc-desc">Repping the "Shady" tee in an Eminem-poster-lined safehouse — red DualSense in hand.</div>
-          </div>
-        </div>
-        <div class="offclock-card has-photo">
-          <img class="oc-photo" src="assets/extracurricular/mortal-kombat.jpg" alt="Mortal Kombat victory screen">
-          <div class="oc-photo-body">
-            <div class="oc-title">Mortal Kombat</div>
-            <div class="oc-meta">"You Win" never gets old</div>
-            <div class="oc-desc">Monk, Shirai Ryu, and Trooper all leveling up after a clean win.</div>
-          </div>
-        </div>
-        <div class="offclock-card has-photo">
-          <img class="oc-photo" src="assets/extracurricular/pubg-mobile.jpg" alt="PUBG Mobile character screen">
-          <div class="oc-photo-body">
-            <div class="oc-title">PUBG Mobile</div>
-            <div class="oc-meta">Sanhok, classic TPP</div>
-            <div class="oc-desc">Level 42 and still dropping into Sanhok with the squad.</div>
-          </div>
-        </div>
-        <div class="offclock-card has-photo">
-          <img class="oc-photo" src="assets/extracurricular/goose-controller.jpg" alt="Pet goose in duck slippers next to a PS5 controller">
-          <div class="oc-photo-body">
-            <div class="oc-title">My real co-op partner</div>
-            <div class="oc-meta">Reviews every controller input</div>
-            <div class="oc-desc">No game night is complete without supervision — duck slippers included.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ═══════════════════════════════════════════════
          OTHER ACTIVITIES
     ═══════════════════════════════════════════════ -->
     <div class="offclock-panel">
@@ -221,11 +180,11 @@ toc: false
           </div>
         </div>
         <div class="offclock-card has-photo">
-          <img class="oc-photo" src="assets/extracurricular/hosting.jpg" alt="Bruschetta plated for a dinner gathering">
+          <img class="oc-photo" src="assets/extracurricular/gta-eminem.jpg" alt="GTA Online, Dr. Dre Contract update, Eminem-themed apartment">
           <div class="oc-photo-body">
-            <div class="oc-title">Hosting</div>
-            <div class="oc-meta">Usually starts with bruschetta</div>
-            <div class="oc-desc">Home-made bruschetta — cherry tomatoes, pesto, shallots — for whoever's coming over.</div>
+            <div class="oc-title">Gaming</div>
+            <div class="oc-meta">GTA Online · The Contract</div>
+            <div class="oc-desc">Repping the "Shady" tee in an Eminem-poster-lined safehouse — red DualSense in hand.</div>
           </div>
         </div>
       </div>
